@@ -1,0 +1,17 @@
+const label = require("../routes/label");
+const client = require("../routes/client");
+const shaikh = require("../routes/shaikh");
+const users = require("../routes/users");
+const auth = require("../routes/auth");
+const error = require("../middleware/error");
+const express = require("express");
+
+module.exports = function(app) {
+  app.use(express.json());
+  app.use("/api/users", users);
+  app.use("/api/auth", auth);
+  app.use("/api/shaikh", shaikh);
+  app.use("/api/client", client);
+  app.use("/api/label", label);
+  app.use(error);
+};
