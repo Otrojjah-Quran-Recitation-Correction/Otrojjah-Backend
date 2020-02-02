@@ -32,5 +32,4 @@ const download = multer({
     checkFileType(file, cb);
   }
 }).single("record");
-
 module.exports = download;

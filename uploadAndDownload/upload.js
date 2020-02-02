@@ -72,10 +72,12 @@ function uploadFile(auth, file, getTheId) {
   const drive = google.drive({ version: "v3", auth });
   console.log("Uploading file to google drive...");
 
-  var fileMetadata = {
-    name: file.filename
+  const folderId = "1pOwfE7sRocgA_ncqu_SXEs1z8-xXjqKP";
+  let fileMetadata = {
+    name: file.filename,
+    parents: [folderId]
   };
-  var media = {
+  let media = {
     mimeType: "audio/wave",
     body: fs.createReadStream(file.path)
   };

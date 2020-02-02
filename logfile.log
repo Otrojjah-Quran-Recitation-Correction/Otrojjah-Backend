@@ -1372,3 +1372,270 @@
 {"message":"Client is not defined","stack":"ReferenceError: Client is not defined\n    at C:\\Users\\AbdEl\\Desktop\\Backend\\routes\\users.js:15:22\n    at C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express-async-errors\\index.js:17:17\n    at Layer.handle [as handle_request] (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\router\\route.js:137:13)\n    at module.exports (C:\\Users\\AbdEl\\Desktop\\Backend\\middleware\\auth.js:11:5)\n    at C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express-async-errors\\index.js:17:17\n    at Layer.handle [as handle_request] (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\router\\route.js:137:13)\n    at Route.dispatch (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\router\\route.js:112:3)\n    at C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express-async-errors\\index.js:17:17\n    at Layer.handle [as handle_request] (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\router\\index.js:281:22\n    at Function.process_params (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\router\\index.js:335:12)\n    at next (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\router\\index.js:275:10)\n    at Function.handle (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\router\\index.js:174:3)\n    at router (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\router\\index.js:47:12)","level":"error","timestamp":"2020-02-02T19:39:05.636Z"}
 {"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T19:39:17.828Z"}
 {"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T19:39:17.875Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T19:50:47.392Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T19:50:47.442Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T19:51:54.432Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T19:51:54.474Z"}
+{"message":"Cannot set headers after they are sent to the client","stack":"Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client\n    at ServerResponse.setHeader (_http_outgoing.js:485:11)\n    at ServerResponse.header (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\response.js:767:10)\n    at ServerResponse.send (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\response.js:170:12)\n    at C:\\Users\\AbdEl\\Desktop\\Backend\\routes\\client.js:35:37\n    at C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express-async-errors\\index.js:17:17\n    at Layer.handle [as handle_request] (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\router\\route.js:137:13)\n    at Route.dispatch (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\router\\route.js:112:3)\n    at C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express-async-errors\\index.js:17:17\n    at Layer.handle [as handle_request] (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\router\\index.js:281:22\n    at Function.process_params (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\router\\index.js:335:12)\n    at next (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\router\\index.js:275:10)\n    at Function.handle (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\router\\index.js:174:3)\n    at router (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\router\\index.js:47:12)\n    at C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express-async-errors\\index.js:17:17","code":"ERR_HTTP_HEADERS_SENT","level":"error","timestamp":"2020-02-02T19:51:55.038Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T19:52:46.078Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T19:52:46.116Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T19:54:24.096Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T19:54:24.127Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T19:59:32.477Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T19:59:32.510Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T20:18:56.957Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T20:18:57.007Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T20:19:16.160Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T20:19:16.195Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T20:22:33.167Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T20:22:33.202Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T20:27:43.811Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T20:27:43.839Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T20:27:55.889Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T20:27:55.918Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T20:27:59.391Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T20:27:59.422Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T20:28:26.966Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T20:28:26.999Z"}
+{"message":"client is not defined","stack":"ReferenceError: client is not defined\n    at C:\\Users\\AbdEl\\Desktop\\Backend\\routes\\client.js:33:12\n    at C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express-async-errors\\index.js:17:17\n    at Layer.handle [as handle_request] (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\router\\route.js:137:13)\n    at Layer.handle [as handle_request] (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\router\\layer.js:91:12)\n    at next (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\router\\route.js:137:13)\n    at Route.dispatch (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\router\\route.js:112:3)\n    at C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express-async-errors\\index.js:17:17\n    at Layer.handle [as handle_request] (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\router\\index.js:281:22\n    at Function.process_params (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\router\\index.js:335:12)\n    at next (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\router\\index.js:275:10)\n    at Function.handle (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\router\\index.js:174:3)\n    at router (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\router\\index.js:47:12)\n    at C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express-async-errors\\index.js:17:17\n    at Layer.handle [as handle_request] (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\router\\layer.js:95:5)","level":"error","timestamp":"2020-02-02T20:28:27.876Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T20:28:45.525Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T20:28:45.558Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T20:29:08.821Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T20:29:08.851Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T20:29:15.130Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T20:29:15.174Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T20:29:42.300Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T20:29:42.336Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T20:32:32.739Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T20:32:32.775Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T20:33:40.794Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T20:33:40.827Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T20:38:12.738Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T20:38:12.777Z"}
+{"message":"validate is not defined","stack":"ReferenceError: validate is not defined\n    at downloadFromClient (C:\\Users\\AbdEl\\Desktop\\Backend\\uploadAndDownload\\download.js:38:21)\n    at C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express-async-errors\\index.js:17:17\n    at Layer.handle [as handle_request] (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\router\\route.js:137:13)\n    at Route.dispatch (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\router\\route.js:112:3)\n    at C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express-async-errors\\index.js:17:17\n    at Layer.handle [as handle_request] (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\router\\index.js:281:22\n    at Function.process_params (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\router\\index.js:335:12)\n    at next (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\router\\index.js:275:10)\n    at Function.handle (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\router\\index.js:174:3)\n    at router (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\router\\index.js:47:12)\n    at C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express-async-errors\\index.js:17:17\n    at Layer.handle [as handle_request] (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at trim_prefix (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\router\\index.js:317:13)\n    at C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\router\\index.js:284:7","level":"error","timestamp":"2020-02-02T20:38:17.294Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T20:38:41.222Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T20:38:41.255Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T20:38:57.117Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T20:38:57.148Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T20:39:19.892Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T20:39:19.929Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T20:44:49.202Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T20:44:49.238Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T20:57:48.130Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T20:57:48.161Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T20:57:53.445Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T20:57:53.479Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T21:02:17.904Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T21:02:17.944Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T21:03:54.620Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T21:03:54.652Z"}
+{"message":"Cannot read property 'transfer-encoding' of undefined","stack":"TypeError: Cannot read property 'transfer-encoding' of undefined\n    at hasbody (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\type-is\\index.js:93:21)\n    at typeofrequest (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\type-is\\index.js:127:8)\n    at multerMiddleware (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\multer\\lib\\make-middleware.js:18:10)\n    at C:\\Users\\AbdEl\\Desktop\\Backend\\routes\\client.js:34:3\n    at C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express-async-errors\\index.js:17:17\n    at Layer.handle [as handle_request] (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\router\\route.js:137:13)\n    at Route.dispatch (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\router\\route.js:112:3)\n    at C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express-async-errors\\index.js:17:17\n    at Layer.handle [as handle_request] (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\router\\index.js:281:22\n    at Function.process_params (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\router\\index.js:335:12)\n    at next (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\router\\index.js:275:10)\n    at Function.handle (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\router\\index.js:174:3)\n    at router (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\router\\index.js:47:12)\n    at C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express-async-errors\\index.js:17:17","level":"error","timestamp":"2020-02-02T21:04:01.011Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T21:04:32.962Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T21:04:33.018Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T21:04:34.802Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T21:04:34.841Z"}
+{"message":"Cannot read property 'transfer-encoding' of undefined","stack":"TypeError: Cannot read property 'transfer-encoding' of undefined\n    at hasbody (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\type-is\\index.js:93:21)\n    at typeofrequest (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\type-is\\index.js:127:8)\n    at multerMiddleware (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\multer\\lib\\make-middleware.js:18:10)\n    at C:\\Users\\AbdEl\\Desktop\\Backend\\routes\\client.js:34:3\n    at C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express-async-errors\\index.js:17:17\n    at Layer.handle [as handle_request] (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\router\\route.js:137:13)\n    at Route.dispatch (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\router\\route.js:112:3)\n    at C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express-async-errors\\index.js:17:17\n    at Layer.handle [as handle_request] (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\router\\index.js:281:22\n    at Function.process_params (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\router\\index.js:335:12)\n    at next (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\router\\index.js:275:10)\n    at Function.handle (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\router\\index.js:174:3)\n    at router (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\router\\index.js:47:12)\n    at C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express-async-errors\\index.js:17:17","level":"error","timestamp":"2020-02-02T21:04:38.364Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T21:04:53.873Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T21:04:53.908Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T21:10:49.398Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T21:10:49.433Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T21:11:27.596Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T21:11:27.638Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T21:23:47.075Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T21:23:47.113Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T21:24:05.044Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T21:24:05.244Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T21:25:03.720Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T21:25:03.757Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T21:29:35.172Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T21:29:35.209Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T21:29:39.930Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T21:29:39.960Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T21:29:45.633Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T21:29:45.662Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T21:30:21.370Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T21:30:21.401Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T21:30:37.056Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T21:30:37.090Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T21:30:39.533Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T21:30:39.564Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T21:30:57.102Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T21:30:57.161Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T21:31:48.081Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T21:31:48.131Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T21:32:00.213Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T21:32:00.247Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T21:32:24.214Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T21:32:24.245Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T21:32:36.028Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T21:32:36.093Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T21:32:44.813Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T21:32:44.847Z"}
+{"message":"Cannot set headers after they are sent to the client","stack":"Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client\n    at ServerResponse.setHeader (_http_outgoing.js:485:11)\n    at ServerResponse.header (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\response.js:767:10)\n    at ServerResponse.send (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\response.js:170:12)\n    at ServerResponse.json (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\response.js:267:15)\n    at startUpload (C:\\Users\\AbdEl\\Desktop\\Backend\\routes\\client.js:77:14)","code":"ERR_HTTP_HEADERS_SENT","level":"error","timestamp":"2020-02-02T21:32:45.224Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T21:32:53.943Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T21:32:53.979Z"}
+{"message":"Cannot set headers after they are sent to the client","stack":"Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client\n    at ServerResponse.setHeader (_http_outgoing.js:485:11)\n    at ServerResponse.header (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\response.js:767:10)\n    at ServerResponse.send (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\response.js:170:12)\n    at ServerResponse.json (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\response.js:267:15)\n    at startUpload (C:\\Users\\AbdEl\\Desktop\\Backend\\routes\\client.js:77:14)","code":"ERR_HTTP_HEADERS_SENT","level":"error","timestamp":"2020-02-02T21:32:59.720Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T21:34:51.346Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T21:34:51.380Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T21:34:58.580Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T21:34:58.620Z"}
+{"message":"Cannot set headers after they are sent to the client","stack":"Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client\n    at ServerResponse.setHeader (_http_outgoing.js:485:11)\n    at ServerResponse.header (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\response.js:767:10)\n    at ServerResponse.send (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\response.js:170:12)\n    at ServerResponse.json (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\response.js:267:15)\n    at startUpload (C:\\Users\\AbdEl\\Desktop\\Backend\\routes\\client.js:85:14)\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)","code":"ERR_HTTP_HEADERS_SENT","level":"error","timestamp":"2020-02-02T21:35:01.199Z"}
+{"message":"Cannot set headers after they are sent to the client","stack":"Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client\n    at ServerResponse.setHeader (_http_outgoing.js:485:11)\n    at ServerResponse.header (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\response.js:767:10)\n    at ServerResponse.send (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\response.js:170:12)\n    at ServerResponse.json (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\response.js:267:15)\n    at startUpload (C:\\Users\\AbdEl\\Desktop\\Backend\\routes\\client.js:85:14)","code":"ERR_HTTP_HEADERS_SENT","level":"error","timestamp":"2020-02-02T21:35:05.177Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T21:35:20.934Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T21:35:20.965Z"}
+{"message":"Cannot set headers after they are sent to the client","stack":"Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client\n    at ServerResponse.setHeader (_http_outgoing.js:485:11)\n    at ServerResponse.header (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\response.js:767:10)\n    at ServerResponse.send (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\response.js:170:12)\n    at ServerResponse.json (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\response.js:267:15)\n    at startUpload (C:\\Users\\AbdEl\\Desktop\\Backend\\routes\\client.js:85:14)","code":"ERR_HTTP_HEADERS_SENT","level":"error","timestamp":"2020-02-02T21:35:21.526Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T21:35:25.056Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T21:35:25.094Z"}
+{"message":"Cannot set headers after they are sent to the client","stack":"Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client\n    at ServerResponse.setHeader (_http_outgoing.js:485:11)\n    at ServerResponse.header (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\response.js:767:10)\n    at ServerResponse.send (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\response.js:170:12)\n    at ServerResponse.json (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\response.js:267:15)\n    at startUpload (C:\\Users\\AbdEl\\Desktop\\Backend\\routes\\client.js:85:14)","code":"ERR_HTTP_HEADERS_SENT","level":"error","timestamp":"2020-02-02T21:35:26.213Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T21:37:31.588Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T21:37:31.668Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T21:37:37.396Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T21:37:37.428Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T21:37:59.310Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T21:37:59.342Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T21:38:27.022Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T21:38:27.052Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T21:40:13.219Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T21:40:13.255Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T21:40:36.885Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T21:40:36.921Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T21:40:42.365Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T21:40:42.400Z"}
+{"message":"Cannot set headers after they are sent to the client","stack":"Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client\n    at ServerResponse.setHeader (_http_outgoing.js:485:11)\n    at ServerResponse.header (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\response.js:767:10)\n    at ServerResponse.send (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\response.js:170:12)\n    at ServerResponse.json (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\response.js:267:15)\n    at ServerResponse.send (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\response.js:158:21)\n    at startUpload (C:\\Users\\AbdEl\\Desktop\\Backend\\routes\\client.js:86:14)\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)","code":"ERR_HTTP_HEADERS_SENT","level":"error","timestamp":"2020-02-02T21:40:48.934Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T21:41:14.127Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T21:41:14.163Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T21:45:10.539Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T21:45:10.568Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T21:45:14.619Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T21:45:14.656Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T21:45:49.371Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T21:45:49.402Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T21:45:52.722Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T21:45:52.771Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T21:47:29.285Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T21:47:29.318Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T21:51:29.931Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T21:51:29.967Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T21:51:37.892Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T21:51:37.922Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T21:53:50.828Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T21:53:50.855Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T21:54:23.502Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T21:54:23.534Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T21:55:12.597Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T21:55:12.635Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T21:55:19.675Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T21:55:19.700Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T21:55:22.878Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T21:55:22.908Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T21:57:40.022Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T21:57:40.059Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T21:57:52.676Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T21:57:52.705Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T21:57:56.361Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T21:57:56.392Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T21:58:13.431Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T21:58:13.467Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T21:59:51.478Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T21:59:51.532Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T22:00:01.835Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T22:00:01.872Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T22:00:17.280Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T22:00:17.312Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T22:00:33.462Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T22:00:33.486Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T22:01:06.416Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T22:01:06.452Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T22:01:10.730Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T22:01:10.764Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T22:01:16.172Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T22:01:16.229Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T22:03:51.292Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T22:03:51.342Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T22:04:54.167Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T22:04:54.200Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T22:05:28.791Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T22:05:28.835Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T22:07:24.915Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T22:07:24.945Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T22:07:44.066Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T22:07:44.095Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T22:07:53.626Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T22:07:53.664Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T22:09:50.137Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T22:09:50.174Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T22:10:11.173Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T22:10:11.231Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T22:10:31.839Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T22:10:31.879Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T22:11:08.745Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T22:11:08.780Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T22:11:51.840Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T22:11:51.873Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T22:12:56.142Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T22:12:56.187Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T22:13:45.082Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T22:13:45.116Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T22:13:57.832Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T22:13:57.876Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T22:14:33.526Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T22:14:33.563Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T22:14:58.381Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T22:14:58.419Z"}
+{"message":"Cannot set headers after they are sent to the client","stack":"Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client\n    at ServerResponse.setHeader (_http_outgoing.js:485:11)\n    at ServerResponse.header (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\response.js:767:10)\n    at ServerResponse.send (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\response.js:170:12)\n    at ServerResponse.json (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\response.js:267:15)\n    at ServerResponse.send (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\response.js:158:21)\n    at startUpload (C:\\Users\\AbdEl\\Desktop\\Backend\\routes\\client.js:97:14)\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)","code":"ERR_HTTP_HEADERS_SENT","level":"error","timestamp":"2020-02-02T22:15:01.286Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T22:15:28.674Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T22:15:28.716Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T22:16:01.828Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T22:16:01.872Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T22:16:32.757Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T22:16:32.865Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T22:16:57.250Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T22:16:57.279Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T22:19:20.648Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T22:19:20.685Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T22:20:11.156Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T22:20:11.192Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T22:21:11.535Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T22:21:11.590Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T22:21:30.442Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T22:21:30.488Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T22:22:07.941Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T22:22:07.980Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T22:22:40.684Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T22:22:40.716Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T22:22:42.612Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T22:22:42.650Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T22:24:56.324Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T22:24:56.362Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T22:25:27.872Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T22:25:27.908Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T22:26:24.771Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T22:26:24.802Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T22:27:16.151Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T22:27:16.189Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T22:28:04.077Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T22:28:04.126Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T22:28:09.837Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T22:28:09.876Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T22:28:16.840Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T22:28:16.871Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T22:28:20.169Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T22:28:20.214Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T22:32:47.516Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T22:32:47.544Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T22:32:50.804Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T22:32:50.874Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T22:32:57.788Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T22:32:57.820Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T22:38:49.979Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T22:38:50.006Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T22:40:09.596Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T22:40:09.657Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T22:40:54.694Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T22:40:54.730Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T22:44:50.665Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T22:44:50.722Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T22:45:17.779Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T22:45:17.833Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T22:45:36.750Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T22:45:36.785Z"}
