@@ -17,9 +17,7 @@ const clientSchema = new mongoose.Schema({
     required: true
   },
   link: {
-    type: String,
-    required: true,
-    unique: true
+    type: String
   },
   correct: Boolean
 });
@@ -31,7 +29,7 @@ function validateClientRecord(client) {
     recordName: Joi.string().required(),
     ayah: Joi.string().required(),
     hokm: Joi.string().required(),
-    link: Joi.string().required()
+    link: Joi.string()
   };
   return Joi.validate(client, schema);
 }

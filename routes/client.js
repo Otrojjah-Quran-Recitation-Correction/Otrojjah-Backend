@@ -1,3 +1,5 @@
+const downloadFromClient = require("../uploadAndDownload/download");
+const authorizeAndUpload = require("../uploadAndDownload/upload");
 const auth = require("../middleware/auth");
 const Joi = require("joi");
 const _ = require("lodash");
@@ -23,16 +25,45 @@ router.get("/:id", async (req, res) => {
 });
 
 router.post("/", async (req, res) => {
+  // get the file from the client -> Done
+  // get the meta (recordName, ayah, hokm) -> Done
+  // upload the file to the drive -> Done
+  // get the link of the file -> Done
+  // todo: save to DB
+
   const { error } = validate(req.body);
   if (error) return res.status(400).send(error.details[0].message);
 
   let client = await Client.findOne({ recordName: req.body.recordName });
   if (client) return res.status(400).send("Record is already registered.");
 
-  client = new Client(_.pick(req.body, ["recordName", "ayah", "hokm", "link"]));
-  await client.save();
+  downloadFromClient(req, res, err => {
+    if (err) {
+      res.send(err);
+    } else {
+      if (req.file == undefined) {
+        res.send("Please upload a file");
+      }
+      // console.log(req.file);
+      // console.log(req.body.recordName);
 
-  res.send(client);
+      authorizeAndUpload(req.file, id => {
+        const link = `https://drive.google.com/file/d/$(id)/view?usp%3Ddrive_open`;
+        console.log("in client, id=" + id);
+        // const client = await User.findByIdAndUpdate(
+        //   id,
+        //   _.pick(req.body, ["name", "email", "phoneNumber", "isShaikh"]),
+        //   {
+        //     new: true
+        //   }
+        // );
+      });
+
+      res.send(req.file);
+    }
+  });
+
+  // res.send(client);
 });
 
 router.put("/:id", async (req, res) => {

@@ -1,3 +1,5 @@
+const auth = require("../middleware/auth");
+const shaikh = require("../middleware/shaikh");
 const Joi = require("joi");
 const _ = require("lodash");
 const { Client } = require("../models/client");
@@ -5,7 +7,7 @@ const express = require("express");
 const router = express.Router();
 
 //todo: to be authorized as a shaikh
-router.put("/:id", async (req, res) => {
+router.put("/:id", [auth, shaikh], async (req, res) => {
   const { id } = req.params;
 
   const { error: idError } = Joi.validate({ id }, { id: Joi.objectId() });
