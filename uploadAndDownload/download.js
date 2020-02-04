@@ -27,9 +27,6 @@ function checkFileType(file, cb) {
 }
 
 const download = multer({
-  storage: storage,
-  fileFilter: function(req, file, cb) {
-    checkFileType(file, cb);
-  }
+  storage: storage
 }).single("record");
 module.exports = download;

@@ -6,11 +6,13 @@ const auth = require("../routes/auth");
 const error = require("../middleware/error");
 const express = require("express");
 const cors = require("cors");
+const multer = require("multer");
 
 module.exports = function(app) {
   app.use(cors());
   app.use(express.static("./public"));
   app.use(express.json());
+  app.use(multer({ dest: "./public/uploads/" }).single("record"));
   app.use("/api/users", users);
   app.use("/api/auth", auth);
   app.use("/api/shaikh", shaikh);

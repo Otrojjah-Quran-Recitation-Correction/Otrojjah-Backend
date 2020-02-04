@@ -15,6 +15,7 @@
     "cors": "^2.8.5",
     "express": "^4.16.2",
     "express-async-errors": "^2.1.0",
+    "express-fileupload": "^1.1.6",
     "fawn": "^2.1.5",
     "googleapis": "^47.0.0",
     "joi": "^13.1.0",
@@ -24,6 +25,7 @@
     "moment": "^2.20.1",
     "mongoose": "^5.8.11",
     "multer": "^1.4.2",
+    "random-int": "^2.0.1",
     "winston": "^2.4.0",
     "winston-mongodb": "^3.0.0"
   },

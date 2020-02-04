@@ -1639,3 +1639,227 @@
 {"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T22:45:17.833Z"}
 {"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T22:45:36.750Z"}
 {"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T22:45:36.785Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-02T22:45:45.778Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-02T22:45:45.808Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-03T10:04:27.651Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-03T10:04:27.686Z"}
+{"message":"Unexpected string in JSON at position 91","stack":"SyntaxError: Unexpected string in JSON at position 91\n    at JSON.parse (<anonymous>)\n    at parse (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\body-parser\\lib\\types\\json.js:89:19)\n    at C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\body-parser\\lib\\read.js:121:18\n    at invokeCallback (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\raw-body\\index.js:224:16)\n    at done (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\raw-body\\index.js:213:7)\n    at IncomingMessage.onEnd (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\raw-body\\index.js:273:7)\n    at IncomingMessage.emit (events.js:215:7)\n    at endReadableNT (_stream_readable.js:1183:12)\n    at processTicksAndRejections (internal/process/task_queues.js:80:21)","expose":true,"statusCode":400,"status":400,"body":"{\r\n    \"name\": \"SaidA\",\r\n    \"email\": \"SaidAhmed@gmail.com\",\r\n    \"password\": \"12345\"\r\n    \"phoneNumber\": \"01064123123\",\r\n    \"isShaikh\": true\r\n}","type":"entity.parse.failed","level":"error","timestamp":"2020-02-03T10:13:10.594Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-02-03T10:56:32.664Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-03T10:56:32.695Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-03T11:01:14.920Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-03T11:01:14.956Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-03T11:42:28.135Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-03T11:42:28.162Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-03T13:01:15.216Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-03T13:01:15.250Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-03T13:04:49.944Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-03T13:04:49.990Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-03T14:11:35.782Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-03T14:11:36.008Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-03T16:34:35.233Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-03T16:34:35.412Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-03T16:34:46.570Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-03T16:34:46.628Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-03T16:36:25.342Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-03T16:36:25.388Z"}
+{"message":"Cannot set headers after they are sent to the client","stack":"Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client\n    at ServerResponse.setHeader (_http_outgoing.js:485:11)\n    at ServerResponse.header (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\response.js:767:10)\n    at ServerResponse.send (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\response.js:170:12)\n    at ServerResponse.json (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\response.js:267:15)\n    at ServerResponse.send (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\response.js:158:21)\n    at startUpload (C:\\Users\\AbdEl\\Desktop\\Backend\\routes\\client.js:102:11)\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)","code":"ERR_HTTP_HEADERS_SENT","level":"error","timestamp":"2020-02-03T16:40:52.451Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-03T16:51:21.502Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-03T16:51:21.541Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-03T16:51:40.828Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-03T16:51:40.865Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-03T16:51:49.403Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-03T16:51:49.475Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-03T16:55:17.873Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-03T16:55:17.932Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-03T16:55:20.199Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-03T16:55:20.239Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-03T16:55:51.073Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-03T16:55:51.106Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-03T16:56:38.019Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-03T16:56:38.053Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-03T16:59:17.102Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-03T16:59:17.143Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-03T16:59:47.852Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-03T16:59:47.916Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-03T17:00:02.973Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-03T17:00:03.010Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-03T17:00:51.247Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-03T17:00:51.276Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-03T17:00:55.878Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-03T17:00:55.909Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-03T17:00:59.235Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-03T17:00:59.275Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-03T18:22:11.015Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-03T18:22:11.056Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-04T12:32:40.169Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-04T12:32:40.198Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-04T12:36:05.357Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-04T12:36:05.415Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-04T12:36:18.402Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-04T12:36:18.432Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-04T12:36:51.896Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-04T12:36:51.932Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-04T12:36:56.396Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-04T12:36:56.430Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-04T12:37:19.690Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-04T12:37:19.731Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-04T12:53:55.070Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-04T12:53:55.101Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-04T12:54:26.858Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-04T12:54:26.890Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-04T12:54:47.685Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-04T12:54:47.723Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-04T12:55:06.877Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-04T12:55:06.909Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-04T12:55:15.722Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-04T12:55:15.759Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-04T12:56:32.998Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-04T12:56:33.031Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-04T12:56:37.905Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-04T12:56:37.937Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-04T12:56:52.706Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-04T12:56:52.741Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-04T12:57:15.370Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-04T12:57:15.418Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-04T12:57:17.724Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-04T12:57:17.755Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-04T12:58:52.437Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-04T12:58:52.484Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-04T13:01:33.724Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-04T13:01:33.757Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-04T13:05:10.482Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-04T13:05:10.521Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-04T13:05:30.486Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-04T13:05:30.517Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-04T13:05:39.671Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-04T13:05:39.701Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-04T13:05:41.884Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-04T13:05:41.918Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-04T13:06:25.279Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-04T13:06:25.309Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-04T13:07:13.484Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-04T13:07:13.529Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-04T13:07:49.207Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-04T13:07:49.239Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-04T13:08:27.789Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-04T13:08:27.820Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-04T13:10:24.975Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-04T13:10:25.009Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-04T13:11:29.938Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-04T13:11:29.972Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-04T13:12:31.312Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-04T13:12:31.346Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-04T13:12:36.005Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-04T13:12:36.033Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-04T13:20:08.255Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-04T13:20:08.307Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-04T13:20:35.016Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-04T13:20:35.054Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-04T13:21:10.869Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-04T13:21:10.903Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-04T13:21:43.395Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-04T13:21:43.428Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-04T13:23:03.428Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-04T13:23:03.461Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-04T13:23:10.316Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-04T13:23:10.350Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-04T13:23:15.434Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-04T13:23:15.476Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-04T13:24:23.220Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-04T13:24:23.258Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-04T13:24:49.283Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-04T13:24:49.318Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-04T13:25:01.497Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-04T13:25:01.533Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-04T13:53:09.764Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-04T13:53:09.810Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-04T13:53:19.558Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-04T13:53:19.634Z"}
+{"message":"Multipart: Boundary not found","stack":"Error: Multipart: Boundary not found\n    at new Multipart (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\busboy\\lib\\types\\multipart.js:58:11)\n    at Multipart (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\busboy\\lib\\types\\multipart.js:26:12)\n    at Busboy.parseHeaders (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\busboy\\lib\\main.js:71:22)\n    at new Busboy (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\busboy\\lib\\main.js:22:10)\n    at multerMiddleware (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\multer\\lib\\make-middleware.js:33:16)\n    at C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express-async-errors\\index.js:17:17\n    at Layer.handle [as handle_request] (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at trim_prefix (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\router\\index.js:317:13)\n    at C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\router\\index.js:284:7\n    at Function.process_params (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\router\\index.js:335:12)\n    at next (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\router\\index.js:275:10)\n    at jsonParser (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\body-parser\\lib\\types\\json.js:118:7)\n    at C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express-async-errors\\index.js:17:17\n    at Layer.handle [as handle_request] (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at trim_prefix (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\router\\index.js:317:13)\n    at C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\router\\index.js:284:7","level":"error","timestamp":"2020-02-04T13:58:26.354Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-04T14:02:23.850Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-04T14:02:23.889Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-04T14:02:52.073Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-04T14:02:52.111Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-04T14:04:23.000Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-04T14:04:23.042Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-04T14:09:13.440Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-04T14:09:13.481Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-04T14:09:38.074Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-04T14:09:38.126Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-04T14:10:07.215Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-04T14:10:07.249Z"}
+{"message":"Cannot set headers after they are sent to the client","stack":"Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client\n    at ServerResponse.setHeader (_http_outgoing.js:485:11)\n    at ServerResponse.header (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\response.js:767:10)\n    at ServerResponse.send (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\response.js:170:12)\n    at ServerResponse.json (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\response.js:267:15)\n    at ServerResponse.send (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\response.js:158:21)\n    at startUpload (C:\\Users\\AbdEl\\Desktop\\Backend\\routes\\client.js:106:14)","code":"ERR_HTTP_HEADERS_SENT","level":"error","timestamp":"2020-02-04T14:10:11.637Z"}
+{"message":"Cannot set headers after they are sent to the client","stack":"Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client\n    at ServerResponse.setHeader (_http_outgoing.js:485:11)\n    at ServerResponse.header (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\response.js:767:10)\n    at ServerResponse.send (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\response.js:170:12)\n    at ServerResponse.json (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\response.js:267:15)\n    at ServerResponse.send (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\response.js:158:21)\n    at startUpload (C:\\Users\\AbdEl\\Desktop\\Backend\\routes\\client.js:106:14)","code":"ERR_HTTP_HEADERS_SENT","level":"error","timestamp":"2020-02-04T14:13:03.111Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-04T14:13:08.525Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-04T14:13:08.565Z"}
+{"message":"Cannot set headers after they are sent to the client","stack":"Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client\n    at ServerResponse.setHeader (_http_outgoing.js:485:11)\n    at ServerResponse.header (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\response.js:767:10)\n    at ServerResponse.send (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\response.js:170:12)\n    at ServerResponse.json (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\response.js:267:15)\n    at ServerResponse.send (C:\\Users\\AbdEl\\Desktop\\Backend\\node_modules\\express\\lib\\response.js:158:21)\n    at startUpload (C:\\Users\\AbdEl\\Desktop\\Backend\\routes\\client.js:106:14)","code":"ERR_HTTP_HEADERS_SENT","level":"error","timestamp":"2020-02-04T14:13:08.956Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-04T14:13:27.135Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-04T14:13:27.172Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-04T14:13:36.231Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-04T14:13:36.267Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-04T14:17:20.035Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-04T14:17:20.068Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-04T14:17:52.843Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-04T14:17:52.880Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-04T14:23:01.899Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-04T14:23:01.933Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-04T14:26:50.823Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-04T14:26:50.871Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-04T14:27:07.651Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-04T14:27:07.683Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-04T14:27:11.822Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-04T14:27:11.860Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-04T14:28:19.286Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-04T14:28:19.320Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-04T14:29:11.909Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-04T14:29:11.947Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-04T14:29:32.277Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-04T14:29:32.309Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-04T14:29:57.437Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-04T14:29:57.478Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-04T14:30:08.811Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-04T14:30:08.859Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-04T14:30:26.005Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-04T14:30:26.044Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-04T14:30:52.578Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-04T14:30:52.621Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-04T14:33:53.604Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-04T14:33:53.661Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-04T14:34:03.420Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-04T14:34:03.470Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-04T14:34:32.193Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-04T14:34:32.224Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-04T14:35:41.688Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-04T14:35:41.725Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-04T14:35:45.915Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-04T14:35:45.947Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-04T14:35:52.430Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-04T14:35:52.475Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-04T14:35:57.228Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-04T14:35:57.270Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-04T14:36:18.092Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-04T14:36:18.132Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-04T14:36:45.966Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-04T14:36:46.000Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-04T14:36:59.793Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-04T14:36:59.830Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-04T14:37:06.137Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-04T14:37:06.196Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-04T14:37:08.261Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-04T14:37:08.302Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-04T14:37:26.645Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-04T14:37:26.677Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-04T14:43:29.945Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-04T14:43:29.978Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-04T14:55:07.003Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-04T14:55:07.042Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-04T14:55:13.699Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-04T14:55:13.739Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-04T14:57:58.713Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-04T14:57:58.747Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-04T14:59:00.473Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-04T14:59:00.507Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-04T15:01:11.053Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-04T15:01:11.102Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-04T15:21:06.767Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-04T15:21:06.796Z"}
