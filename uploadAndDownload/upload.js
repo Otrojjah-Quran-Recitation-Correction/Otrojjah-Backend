@@ -74,7 +74,7 @@ function uploadFile(auth, file, getTheId) {
 
   const folderId = "1pOwfE7sRocgA_ncqu_SXEs1z8-xXjqKP";
   let fileMetadata = {
-    name: file.filename,
+    name: file.filename + ".wav",
     parents: [folderId]
   };
   let media = {
