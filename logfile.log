@@ -1863,3 +1863,7 @@
 {"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-04T15:01:11.102Z"}
 {"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-04T15:21:06.767Z"}
 {"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-04T15:21:06.796Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-04T15:21:12.232Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-04T15:21:12.264Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-04T15:26:41.408Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-04T15:26:41.438Z"}

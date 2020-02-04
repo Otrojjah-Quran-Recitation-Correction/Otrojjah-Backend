@@ -44,17 +44,17 @@ router.post("/", async (req, res) => {
     let client = await Client.findOne({ recordName: req.body.recordName });
     if (client) return res.status(400).send("Record is already registered.");
 
-    // authorizeAndUpload(req.file, async id => {
-    //   const link = `https://drive.google.com/file/d/${id}/view?usp%3Ddrive_open`;
-    //   client = new Client({
-    //     recordName: req.file.filename,
-    //     ayah: req.body.ayah,
-    //     hokm: req.body.hokm,
-    //     link: link
-    //   });
-    //   console.log(client);
-    //   await client.save();
-    // });
+    authorizeAndUpload(req.file, async id => {
+      const link = `https://drive.google.com/uc?export=download&id=${id}`;
+      client = new Client({
+        recordName: req.file.filename,
+        ayah: req.body.ayah,
+        hokm: req.body.hokm,
+        link: link
+      });
+      console.log(client);
+      await client.save();
+    });
   } catch (err) {
     console.log(err);
     if (err) {
