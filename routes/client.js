@@ -1,4 +1,4 @@
-const authorizeAndUpload = require("../uploadAndDownload/upload");
+const { authorizeAndUpload } = require("../uploadAndDownload/upload");
 const auth = require("../middleware/auth");
 const Joi = require("joi");
 const _ = require("lodash");
@@ -44,12 +44,14 @@ router.post("/", async (req, res) => {
     let client = await Client.findOne({ recordName: req.body.recordName });
     if (client) return res.status(400).send("Record is already registered.");
 
-    authorizeAndUpload(req.file, async id => {
+    //todo get the folderId to upload to
+    authorizeAndUpload(req.file, req.body.folderId, async id => {
       const link = `https://drive.google.com/uc?export=download&id=${id}`;
       client = new Client({
         recordName: req.file.filename,
         ayah: req.body.ayah,
         hokm: req.body.hokm,
+        folderId: req.body.folderId,
         link: link
       });
       console.log(client);
@@ -65,6 +67,7 @@ router.post("/", async (req, res) => {
 });
 
 router.put("/:id", async (req, res) => {
+  //todo if folderId is changed, delete the file from the previous drive path and add it to the new
   const { id } = req.params;
 
   const { error: idError } = Joi.validate({ id }, { id: Joi.objectId() });
@@ -78,7 +81,7 @@ router.put("/:id", async (req, res) => {
 
   const newClient = await Client.findByIdAndUpdate(
     id,
-    _.pick(req.body, ["recordName", "ayah", "hokm", "link"]),
+    _.pick(req.body, ["recordName", "ayah", "hokm", "folderId", "link"]),
     {
       new: true
     }
@@ -88,6 +91,7 @@ router.put("/:id", async (req, res) => {
 });
 
 router.delete("/:id", async (req, res) => {
+  //todo delete the file from the drive path(folderId)
   const { id } = req.params;
 
   const { error: idError } = Joi.validate({ id }, { id: Joi.objectId() });
@@ -98,7 +102,5 @@ router.delete("/:id", async (req, res) => {
 
   res.send(client);
 });
-
-async function startUpload(req, res) {}
 
 module.exports = router;

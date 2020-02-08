@@ -16,6 +16,10 @@ const clientSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  folderId: {
+    type: String,
+    required: true
+  },
   link: {
     type: String
   },
@@ -29,6 +33,7 @@ function validateClientRecord(client) {
     recordName: Joi.string().required(),
     ayah: Joi.string().required(),
     hokm: Joi.string().required(),
+    folderId: Joi.string().required(),
     link: Joi.string()
   };
   return Joi.validate(client, schema);

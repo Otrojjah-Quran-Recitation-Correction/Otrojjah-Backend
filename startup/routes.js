@@ -1,3 +1,4 @@
+const uploadFolder = require("../routes/uploadFolder");
 const label = require("../routes/label");
 const client = require("../routes/client");
 const shaikh = require("../routes/shaikh");
@@ -18,5 +19,6 @@ module.exports = function(app) {
   app.use("/api/shaikh", shaikh);
   app.use("/api/client", client);
   app.use("/api/label", label);
+  app.use("/api/uploadFolder", uploadFolder);
   app.use(error);
 };

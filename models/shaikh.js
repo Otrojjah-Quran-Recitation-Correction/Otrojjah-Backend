@@ -25,7 +25,7 @@ const shaikhSchema = new mongoose.Schema({
 
 const Shaikh = mongoose.model("Shaikh", shaikhSchema);
 
-function validateShaikhRecord(shaikh) {
+function validateShaikh(shaikh) {
   const schema = {
     shaikhName: Joi.string().required(),
     ayah: Joi.string().required(),
@@ -36,4 +36,4 @@ function validateShaikhRecord(shaikh) {
 }
 
 exports.Shaikh = Shaikh;
-exports.validate = validateShaikhRecord;
+exports.validateShaikh = validateShaikh;
