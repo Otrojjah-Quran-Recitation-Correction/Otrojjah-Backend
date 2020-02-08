@@ -55,11 +55,11 @@ function uploadFile(auth, file, folderId, getTheId) {
 
   // const folderId = "1pOwfE7sRocgA_ncqu_SXEs1z8-xXjqKP";
   let fileMetadata = {
-    name: file.filename + ".wav",
+    name: file.filename,
     parents: [folderId]
   };
   let media = {
-    mimeType: "audio/wave",
+    mimeType: "audio/wav",
     body: fs.createReadStream(file.path)
   };
 
@@ -85,7 +85,7 @@ function listFiles(auth, file, folderId, getTheId) {
   drive.files.list(
     {
       q: `'${folderId}' in parents`,
-      fields: "nextPageToken, files(id, name)"
+      fields: "nextPageToken, files(webContentLink, name)"
     },
     (err, res) => {
       if (err) return console.log("The API returned an error: " + err);

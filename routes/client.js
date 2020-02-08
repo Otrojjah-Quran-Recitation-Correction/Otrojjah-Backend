@@ -1,4 +1,5 @@
 const { authorizeAndUpload } = require("../uploadAndDownload/upload");
+const download = require("../uploadAndDownload/download");
 const auth = require("../middleware/auth");
 const Joi = require("joi");
 const _ = require("lodash");
@@ -32,21 +33,20 @@ router.get("/:id", async (req, res) => {
   res.send(client);
 });
 
-router.post("/", async (req, res) => {
+router.post("/", download, async (req, res) => {
   try {
+    console.log(req.file);
+
     const { error } = validate(req.body);
     if (error) return res.status(400).send(error.details[0].message);
-
     if (req.file == undefined) {
       res.send("Please upload a file");
     }
-
     let client = await Client.findOne({ recordName: req.body.recordName });
     if (client) return res.status(400).send("Record is already registered.");
-
     //todo get the folderId to upload to
     authorizeAndUpload(req.file, req.body.folderId, async id => {
-      const link = `https://drive.google.com/uc?export=download&id=${id}`;
+      const link = `https://drive.google.com/uc?id=${id}&export=download`;
       client = new Client({
         recordName: req.file.filename,
         ayah: req.body.ayah,

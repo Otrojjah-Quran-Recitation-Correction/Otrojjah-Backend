@@ -36,7 +36,7 @@ function saveToDb(folderId, ayah, hokm) {
         shaikhName: file.name,
         ayah: ayah,
         hokm: hokm,
-        link: `https://drive.google.com/uc?export=download&id=${file.id}`
+        link: file.webContentLink
       };
       const { error } = validateShaikh(shaikhJson);
       if (!error) {
