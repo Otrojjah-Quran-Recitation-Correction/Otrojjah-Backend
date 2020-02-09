@@ -3,11 +3,9 @@ const download = require("../uploadAndDownload/download");
 const auth = require("../middleware/auth");
 const Joi = require("joi");
 const _ = require("lodash");
-const { Client, validate } = require("../models/client");
+const { Client, validate, getFolderId } = require("../models/client");
 const express = require("express");
 const router = express.Router();
-const util = require("util");
-const fs = require("fs");
 const randomInt = require("random-int");
 
 router.get("/", async (req, res) => {
@@ -35,8 +33,6 @@ router.get("/:id", async (req, res) => {
 
 router.post("/", download, async (req, res) => {
   try {
-    console.log(req.file);
-
     const { error } = validate(req.body);
     if (error) return res.status(400).send(error.details[0].message);
     if (req.file == undefined) {
@@ -44,14 +40,16 @@ router.post("/", download, async (req, res) => {
     }
     let client = await Client.findOne({ recordName: req.body.recordName });
     if (client) return res.status(400).send("Record is already registered.");
-    //todo get the folderId to upload to
-    authorizeAndUpload(req.file, req.body.folderId, async id => {
+
+    const folderId = getFolderId(req.body.ayah, req.body.hokm);
+
+    authorizeAndUpload(req.file, folderId, async id => {
       const link = `https://drive.google.com/uc?id=${id}&export=download`;
       client = new Client({
         recordName: req.file.filename,
         ayah: req.body.ayah,
         hokm: req.body.hokm,
-        folderId: req.body.folderId,
+        folderId: folderId,
         link: link
       });
       console.log(client);
@@ -81,12 +79,17 @@ router.put("/:id", async (req, res) => {
 
   const newClient = await Client.findByIdAndUpdate(
     id,
-    _.pick(req.body, ["recordName", "ayah", "hokm", "folderId", "link"]),
+    {
+      recordName: req.body.recordName,
+      ayah: req.body.ayah,
+      hokm: req.body.hokm,
+      link: req.body.link,
+      folderId: getFolderId(req.body.ayah, req.body.hokm)
+    },
     {
       new: true
     }
   );
-
   res.send(newClient);
 });
 
