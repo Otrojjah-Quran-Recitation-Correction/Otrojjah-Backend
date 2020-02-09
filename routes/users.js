@@ -6,17 +6,29 @@ const { User, validate } = require("../models/user");
 const express = require("express");
 const router = express.Router();
 
-router.get("/me", auth, async (req, res) => {
+router.get("/me", async (req, res) => {
   const user = await User.findById(req.user._id).select("-password");
   res.send(user);
 });
 
-router.get("/", auth, async (req, res) => {
+router.get("/", async (req, res) => {
   const allClients = await User.find({});
   res.send(allClients);
 });
 
-router.post("/", auth, async (req, res) => {
+router.get("/:id", async (req, res) => {
+  const { id } = req.params;
+
+  const { error: idError } = Joi.validate({ id }, { id: Joi.objectId() });
+  if (idError) return res.status(400).send(idError.details[0].message);
+
+  const user = await User.findById(id);
+  if (!user) return res.status(400).send("There is no such record");
+
+  res.send(user);
+});
+
+router.post("/", async (req, res) => {
   const { error } = validate(req.body);
   if (error) return res.status(400).send(error.details[0].message);
 
@@ -36,7 +48,7 @@ router.post("/", auth, async (req, res) => {
     .send(_.pick(user, ["_id", "name", "email", "phoneNumber", "isShaikh"]));
 });
 
-router.delete("/:id", auth, async (req, res) => {
+router.delete("/:id", async (req, res) => {
   const { id } = req.params;
 
   const { error: idError } = Joi.validate({ id }, { id: Joi.objectId() });
@@ -48,7 +60,7 @@ router.delete("/:id", auth, async (req, res) => {
   res.send(user);
 });
 
-router.put("/:id", auth, async (req, res) => {
+router.put("/:id", async (req, res) => {
   const { id } = req.params;
 
   const { error: idError } = Joi.validate({ id }, { id: Joi.objectId() });
