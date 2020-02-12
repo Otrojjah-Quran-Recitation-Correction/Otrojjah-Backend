@@ -2442,3 +2442,5 @@
 {"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-12T12:34:26.739Z"}
 {"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-12T12:36:40.259Z"}
 {"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-12T12:36:40.293Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-02-12T12:37:31.760Z"}
+{"level":"info","message":"Connected to mongodb://localhost/Tajweed...","timestamp":"2020-02-12T12:37:31.805Z"}

@@ -10,6 +10,7 @@ const router = express.Router();
 router.put("/:id", [auth, shaikh], async (req, res) => {
   const { id } = req.params;
 
+  //todo validate (correct)
   const { error: idError } = Joi.validate({ id }, { id: Joi.objectId() });
   if (idError) return res.status(400).send(idError.details[0].message);
 

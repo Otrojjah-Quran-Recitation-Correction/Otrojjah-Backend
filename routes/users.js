@@ -55,7 +55,7 @@ router.delete("/:id", async (req, res) => {
   if (idError) return res.status(400).send(idError.details[0].message);
 
   const user = await User.findByIdAndRemove(id);
-  if (!user) return res.status(400).send("There is no such comment");
+  if (!user) return res.status(400).send("There is no such user");
 
   res.send(user);
 });

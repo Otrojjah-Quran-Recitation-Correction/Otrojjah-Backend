@@ -83,7 +83,6 @@ router.put("/:id", async (req, res) => {
       recordName: req.body.recordName,
       ayah: req.body.ayah,
       hokm: req.body.hokm,
-      link: req.body.link,
       folderId: getFolderId(req.body.ayah, req.body.hokm)
     },
     {

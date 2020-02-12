@@ -30,6 +30,7 @@ router.post("/", async (req, res) => {
 });
 
 function saveToDb(folderId, ayah, hokm) {
+  //todo
   authorizeAndList(folderId, async files => {
     files.map(async file => {
       let shaikhJson = {
