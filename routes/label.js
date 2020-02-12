@@ -7,7 +7,7 @@ const express = require("express");
 const router = express.Router();
 
 //todo: to be authorized as a shaikh
-router.put("/:id", [auth, shaikh], async (req, res) => {
+router.put("/:id", async (req, res) => {
   const { id } = req.params;
 
   //todo validate (correct)
