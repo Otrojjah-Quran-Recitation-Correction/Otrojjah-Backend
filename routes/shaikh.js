@@ -1,7 +1,7 @@
 const auth = require("../middleware/auth");
 const Joi = require("joi");
 const _ = require("lodash");
-const { Shaikh, validate } = require("../models/shaikh");
+const { Shaikh, validateShaikh } = require("../models/shaikh");
 const express = require("express");
 const router = express.Router();
 
@@ -23,7 +23,7 @@ router.get("/:id", async (req, res) => {
 });
 
 router.post("/", async (req, res) => {
-  const { error } = validate(req.body);
+  const { error } = validateShaikh(req.body);
   if (error) return res.status(400).send(error.details[0].message);
 
   let shaikh = await Shaikh.findOne({ shaikhName: req.body.shaikhName });
@@ -41,7 +41,7 @@ router.put("/:id", async (req, res) => {
   const { error: idError } = Joi.validate({ id }, { id: Joi.objectId() });
   if (idError) return res.status(400).send(idError.details[0].message);
 
-  const { error } = validate(req.body);
+  const { error } = validateShaikh(req.body);
   if (error) return res.status(400).send(error.details[0].message);
 
   const shaikh = await Shaikh.findById(id);
