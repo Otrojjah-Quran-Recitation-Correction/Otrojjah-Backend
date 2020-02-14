@@ -17,7 +17,7 @@ const Hokm = mongoose.model("Hokm", hokmSchema);
 
 function validateHokm(hokm) {
   const schema = {
-    hokm: Joi.string().required(),
+    name: Joi.string().required(),
     details: Joi.string().required()
   };
   return Joi.validate(hokm, schema);
