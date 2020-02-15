@@ -1,13 +1,12 @@
+const express = require("express");
+const router = express.Router();
+const auth = require("../middleware/auth");
+const { authorizeAndList } = require("../uploadAndDownload/upload");
+const { Shaikh, validateShaikh } = require("../models/shaikh");
 const {
   uploadedFolders,
   validateUploadedFolders
 } = require("../models/uploadedFolders");
-const { authorizeAndList } = require("../uploadAndDownload/upload");
-const { Shaikh, validateShaikh } = require("../models/shaikh");
-const auth = require("../middleware/auth");
-const _ = require("lodash");
-const express = require("express");
-const router = express.Router();
 
 router.post("/", async (req, res) => {
   const { error } = validateUploadedFolders(req.body);

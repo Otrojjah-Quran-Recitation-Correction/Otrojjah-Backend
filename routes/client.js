@@ -1,12 +1,12 @@
-const { authorizeAndUpload } = require("../uploadAndDownload/upload");
-const download = require("../uploadAndDownload/download");
-const auth = require("../middleware/auth");
-const Joi = require("joi");
-const _ = require("lodash");
-const { Client, validate, getFolderId } = require("../models/client");
 const express = require("express");
 const router = express.Router();
+const Joi = require("joi");
+const _ = require("lodash");
 const randomInt = require("random-int");
+const auth = require("../middleware/auth");
+const download = require("../uploadAndDownload/download");
+const { authorizeAndUpload } = require("../uploadAndDownload/upload");
+const { Client, validate, getFolderId } = require("../models/client");
 
 router.get("/", async (req, res) => {
   const allRecords = await Client.find({});

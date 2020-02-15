@@ -1,10 +1,10 @@
-const auth = require("../middleware/auth");
-const shaikh = require("../middleware/shaikh");
-const Joi = require("joi");
-const _ = require("lodash");
-const { Client } = require("../models/client");
 const express = require("express");
 const router = express.Router();
+const Joi = require("joi");
+const _ = require("lodash");
+const auth = require("../middleware/auth");
+const shaikh = require("../middleware/shaikh");
+const { Client } = require("../models/client");
 
 //todo: to be authorized as a shaikh
 router.put("/:id", async (req, res) => {

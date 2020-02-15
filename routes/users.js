@@ -1,20 +1,20 @@
-const auth = require("../middleware/auth");
+const express = require("express");
+const router = express.Router();
 const bcrypt = require("bcryptjs");
 const Joi = require("joi");
 const _ = require("lodash");
+const auth = require("../middleware/auth");
 const { User, validate } = require("../models/user");
-const express = require("express");
-const router = express.Router();
-
-router.get("/me", async (req, res) => {
-  const user = await User.findById(req.user._id).select("-password");
-  res.send(user);
-});
 
 router.get("/", async (req, res) => {
   const allClients = await User.find({});
   res.send(allClients);
 });
+
+router.get("/me", async (req, res) => {
+  const user = await User.findById(req.user._id).select("-password");
+  res.send(user);
+});  
 
 router.get("/:id", async (req, res) => {
   const { id } = req.params;
@@ -48,18 +48,6 @@ router.post("/", async (req, res) => {
     .send(_.pick(user, ["_id", "name", "email", "phoneNumber", "isShaikh"]));
 });
 
-router.delete("/:id", async (req, res) => {
-  const { id } = req.params;
-
-  const { error: idError } = Joi.validate({ id }, { id: Joi.objectId() });
-  if (idError) return res.status(400).send(idError.details[0].message);
-
-  const user = await User.findByIdAndRemove(id);
-  if (!user) return res.status(400).send("There is no such user");
-
-  res.send(user);
-});
-
 router.put("/:id", async (req, res) => {
   const { id } = req.params;
 
@@ -82,5 +70,17 @@ router.put("/:id", async (req, res) => {
 
   res.send(newUser);
 });
+
+router.delete("/:id", async (req, res) => {
+  const { id } = req.params;
+
+  const { error: idError } = Joi.validate({ id }, { id: Joi.objectId() });
+  if (idError) return res.status(400).send(idError.details[0].message);
+
+  const user = await User.findByIdAndRemove(id);
+  if (!user) return res.status(400).send("There is no such user");
+
+  res.send(user);
+});  
 
 module.exports = router;

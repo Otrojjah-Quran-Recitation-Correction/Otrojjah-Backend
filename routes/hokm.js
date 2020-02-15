@@ -1,9 +1,9 @@
-const auth = require("../middleware/auth");
-const Joi = require("joi");
-const _ = require("lodash");
-const { Hokm, validateHokm } = require("../models/hokm");
 const express = require("express");
 const router = express.Router();
+const Joi = require("joi");
+const _ = require("lodash");
+const auth = require("../middleware/auth");
+const { Hokm, validateHokm } = require("../models/hokm");
 
 router.get("/", async (req, res) => {
   const allRecords = await Hokm.find({});

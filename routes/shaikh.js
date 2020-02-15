@@ -1,9 +1,9 @@
-const auth = require("../middleware/auth");
-const Joi = require("joi");
-const _ = require("lodash");
-const { Shaikh, validateShaikh } = require("../models/shaikh");
 const express = require("express");
 const router = express.Router();
+const Joi = require("joi");
+const _ = require("lodash");
+const auth = require("../middleware/auth");
+const { Shaikh, validateShaikh } = require("../models/shaikh");
 
 router.get("/", async (req, res) => {
   const allRecords = await Shaikh.find({});
