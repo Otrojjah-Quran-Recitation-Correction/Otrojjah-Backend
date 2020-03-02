@@ -15,6 +15,10 @@ const uploadedFoldersSchema = new mongoose.Schema({
   hokm: {
     type: String,
     required: true
+  },
+  type: {
+    type: String,
+    required: true
   }
 });
 
@@ -27,7 +31,8 @@ function validate(req) {
   const schema = {
     folderId: Joi.string().required(),
     ayah: Joi.string().required(),
-    hokm: Joi.string().required()
+    hokm: Joi.string().required(),
+    type: Joi.string().required()
   };
   return Joi.validate(req, schema);
 }
