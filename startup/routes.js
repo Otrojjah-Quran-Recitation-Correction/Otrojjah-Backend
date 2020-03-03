@@ -2,6 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const error = require("../middleware/error");
 const users = require("../routes/users");
+const records = require("../routes/records");
 const hokm = require("../routes/hokm");
 const client = require("../routes/client");
 const shaikh = require("../routes/shaikh");
@@ -14,6 +15,7 @@ module.exports = function(app) {
   app.use(express.static("./public"));
   app.use(express.json());
   app.use("/api/users", users);
+  app.use("/api/records", records);
   app.use("/api/hokm", hokm);
   app.use("/api/client", client);
   app.use("/api/shaikh", shaikh);
