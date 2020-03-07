@@ -1,4 +1,3 @@
 {
-  "jwtPrivateKey": "tajweed",
-  "db": "db"
+  "jwtPrivateKey": "tajweed"
 }
