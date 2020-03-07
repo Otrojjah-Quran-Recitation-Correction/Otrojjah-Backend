@@ -13,7 +13,7 @@ router.get("/", async (req, res) => {
   } else if (type === "shaikh") {
     const shaikhRecords = await Shaikh.find({}).select("link");
     return res.send(shaikhRecords);
-  } else if (type === client) {
+  } else if (type === "client") {
     const clientRecords = await Client.find({ correct: label }).select("link");
     return res.send(clientRecords);
   } else return res.status(400).send("Invalid type.");
