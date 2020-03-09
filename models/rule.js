@@ -8,7 +8,7 @@ const ruleSchema = new mongoose.Schema({
     unique: true
   },
   parentId: {
-    type: Schema.Types.ObjectId
+    type: String
   },
   description: {
     type: String
