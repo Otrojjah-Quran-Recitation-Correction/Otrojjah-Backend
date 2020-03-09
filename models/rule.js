@@ -8,12 +8,10 @@ const ruleSchema = new mongoose.Schema({
     unique: true
   },
   parentId: {
-    type: Schema.Types.ObjectId,
-    required: true
+    type: Schema.Types.ObjectId
   },
   description: {
-    type: String,
-    required: true
+    type: String
   }
 });
 
