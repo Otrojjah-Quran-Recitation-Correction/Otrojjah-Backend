@@ -1,13 +1,16 @@
 const express = require("express");
 const router = express.Router();
 const Joi = require("joi");
+const _ = require("lodash");
 const { Rule, getRuleChildren, validateRule } = require("../models/rule");
 
 router.get("/:id", async (req, res) => {
   const { id } = req.params;
 
-  const { error } = Joi.validate({ id }, { id: Joi.objectId() });
-  if (error) return res.status(400).send(error.details[0].message);
+  if (id) {
+    const { error } = Joi.validate({ id }, { id: Joi.objectId() });
+    if (error) return res.status(400).send(error.details[0].message);
+  }
 
   const rules = await getRuleChildren(id);
   if (!rules) return res.status(400).send("There is no children of this rule.");
@@ -15,18 +18,22 @@ router.get("/:id", async (req, res) => {
   res.send(rules);
 });
 
-// router.post("/", async (req, res) => {
-//   const { error } = validateHokm(req.body);
-//   if (error) return res.status(400).send(error.details[0].message);
+router.post("/", async (req, res) => {
+  const { error } = validateRule(req.body);
+  if (error) return res.status(400).send(error.details[0].message);
 
-//   let hokm = await Hokm.findOne({ name: req.body.name });
-//   if (hokm) return res.status(400).send("Record is already registered.");
+  let rule = await Rule.findOne({ name: req.body.name });
+  if (rule) return res.status(400).send("Rule is already exists.");
 
-//   hokm = new Hokm(_.pick(req.body, ["name", "details"]));
-//   await hokm.save();
+  const rootRule = await getRuleChildren();
+  if (rootRule && !rule.parentId)
+    return res.status(400).send("There is already root rule.");
 
-//   res.send(hokm);
-// });
+  rule = new Rule(_.pick(req.body, ["name", "description", "parentId"]));
+  await rule.save();
+
+  res.send(rule);
+});
 
 // router.put("/:id", async (req, res) => {
 //   const { id } = req.params;
