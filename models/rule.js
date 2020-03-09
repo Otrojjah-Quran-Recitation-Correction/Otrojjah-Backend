@@ -28,5 +28,10 @@ function validateRule(rule) {
   return Joi.validate(rule, schema);
 }
 
+async function getRuleChildren(id) {
+  return await Rule.find({ parentId: id });
+}
+
 exports.Rule = Rule;
+exports.getRuleChildren = getRuleChildren;
 exports.validateRule = validateRule;
