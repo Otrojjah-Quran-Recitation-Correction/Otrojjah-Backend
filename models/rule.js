@@ -27,7 +27,7 @@ function validateRule(rule) {
 }
 
 async function getRuleChildren(id) {
-  return await Rule.find({ parentId: id });
+  return await Rule.find({ parentId: id }).select("-__v");
 }
 
 exports.Rule = Rule;
