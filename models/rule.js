@@ -4,11 +4,11 @@ const mongoose = require("mongoose");
 const ruleSchema = new mongoose.Schema({
   name: {
     type: String,
-    required: true,
-    unique: true
+    required: true
   },
   parentId: {
-    type: String
+    type: mongoose.Schema.Types.ObjectId,
+    required: true
   },
   description: {
     type: String
@@ -20,8 +20,8 @@ const Rule = mongoose.model("Rule", ruleSchema);
 function validateRule(rule) {
   const schema = {
     name: Joi.string().required(),
-    description: Joi.string().required(),
-    parentId: Joi.ObjectId().required()
+    description: Joi.string(),
+    parentId: Joi.objectId().required()
   };
   return Joi.validate(rule, schema);
 }
