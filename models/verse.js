@@ -26,5 +26,13 @@ function validateVerse(verse) {
   return Joi.validate(verse, schema);
 }
 
+function getVerses(query) {
+  const filter = {};
+  if (query.id) filter._id = query.id;
+  if (query.ruleId) filter.ruleId = query.ruleId;
+  return await Verse.find(filter).select("-__v");
+}
+
 exports.Verse = Verse;
 exports.validateVerse = validateVerse;
+exports.getVerses = getVerses;
