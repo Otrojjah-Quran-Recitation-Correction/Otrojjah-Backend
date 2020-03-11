@@ -7,7 +7,7 @@ const verseSchema = new mongoose.Schema({
     required: true
   },
   ruleId: {
-    type: Mongoose.Schema.Types.ObjectId,
+    type: mongoose.Schema.Types.ObjectId,
     required: true
   },
   surah: {
@@ -26,7 +26,7 @@ function validateVerse(verse) {
   return Joi.validate(verse, schema);
 }
 
-function getVerses(query) {
+async function getVerses(query) {
   const filter = {};
   if (query.id) filter._id = query.id;
   if (query.ruleId) filter.ruleId = query.ruleId;
