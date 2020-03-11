@@ -3,6 +3,7 @@ const router = express.Router();
 const Joi = require("joi");
 const _ = require("lodash");
 const { Rule, getRuleChildren, validateRule } = require("../models/rule");
+const validateObjectId = require("../middleware/validateObjectId");
 
 router.get("/", async (req, res) => {
   const rules = await getRuleChildren();
@@ -40,23 +41,19 @@ router.post("/", async (req, res) => {
   res.send(rule);
 });
 
-router.put("/:id", async (req, res) => {
-  const { id } = req.params;
-
+router.put("/:id", validateObjectId, async (req, res) => {
   const { error } = validateRule(req.body);
   if (error) return res.status(400).send(error.details[0].message);
 
   if (req.body.parentId)
     return res.status(400).send("ParentId can't be modified.");
 
-  const Rule = await Rule.findById(id);
-  if (!Rule) return res.status(400).send("There is no such rule");
-
-  const newRule = await Rule.findByIdAndUpdate(id, req.body, {
+  const Rule = await Rule.findByIdAndUpdate(req.params.id, req.body, {
     new: true
   });
+  if (!Rule) return res.status(400).send("There is no such rule");
 
-  res.send(newRule);
+  res.send(Rule);
 });
 
 module.exports = router;
