@@ -25,7 +25,6 @@ const userSchema = new mongoose.Schema({
   },
   phoneNumber: {
     type: String,
-    required: true,
     minlength: 5,
     maxlength: 14
   },
@@ -60,8 +59,7 @@ function validateUser(user) {
       .required(),
     phoneNumber: Joi.string()
       .min(5)
-      .max(15)
-      .required(),
+      .max(15),
     isShaikh: Joi.boolean()
   };
 
