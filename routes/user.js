@@ -6,12 +6,12 @@ const { User, validateUser } = require("../models/user");
 const validateObjectId = require("../middleware/validateObjectId");
 
 router.get("/", async (req, res) => {
-  const users = await User.find({});
+  const users = await User.find({}).select("-password -__v");
   res.send(users);
 });
 
 router.get("/me", async (req, res) => {
-  const user = await User.findOneById(req.user._id).select("-password");
+  const user = await User.findOneById(req.user._id).select("-password -__v");
   res.send(user);
 });
 
