@@ -7,7 +7,7 @@ const validateObjectId = require("../middleware/validateObjectId");
 
 router.get("/", async (req, res) => {
   const verses = await getVerses(req.query);
-  return res.send(verses);
+  res.send(verses);
 });
 
 router.post("/", async (req, res) => {
