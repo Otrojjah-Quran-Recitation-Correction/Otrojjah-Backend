@@ -1,5 +1,6 @@
 const Joi = require("joi");
 const mongoose = require("mongoose");
+const _ = require("lodash");
 
 const recordSchema = new mongoose.Schema({
   name: {
@@ -54,7 +55,7 @@ async function createRecord(body) {
   const record = new Record(
     _.pick(body, ["name", "label", "verseId", "filePath", "isShaikh"])
   );
-  await Record.save();
+  await record.save();
   return record;
 }
 
