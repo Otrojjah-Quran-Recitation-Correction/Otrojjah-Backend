@@ -53,6 +53,14 @@ function validateRecord(record) {
   return Joi.validate(record, schema);
 }
 
+async function createRecord(body) {
+  const record = new Record(
+    _.pick(body, ["name", "label", "verseId", "filePath", "isShaikh"])
+  );
+  await Record.save();
+  return record;
+}
+
 async function getRecord(query) {
   const filter = {};
   if (query.id) filter._id = query.id;
@@ -63,6 +71,6 @@ async function getRecord(query) {
   return await Record.find(filter).select("-__v");
 }
 
-exports.Record = Record;
 exports.validateRecord = validateRecord;
 exports.getRecord = getRecord;
+exports.createRecord = createRecord;
