@@ -11,7 +11,7 @@ const recordSchema = new mongoose.Schema({
     required: true
   },
   verseId: {
-    type: Mongoose.Schema.Types.ObjectId,
+    type: mongoose.Schema.Types.ObjectId,
     required: true
   },
   filePath: {
@@ -22,9 +22,9 @@ const recordSchema = new mongoose.Schema({
     type: Boolean
   },
   labeledBy: [
-    new Schema({
+    new mongoose.Schema({
       shaikhId: {
-        type: Mongoose.Schema.Types.ObjectId
+        type: mongoose.Schema.Types.ObjectId
       },
       shaikhName: {
         type: String
@@ -42,10 +42,7 @@ function validateRecord(record) {
   const schema = {
     name: Joi.string().required(),
     label: Joi.string().required(),
-    verseId: {
-      type: Mongoose.Schema.Types.ObjectId,
-      required: true
-    },
+    verseId: Joi.objectId().required(),
     filePath: Joi.string().required(),
     isShaikh: Joi.boolean(),
     labeledBy: Joi.array()
