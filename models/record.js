@@ -53,5 +53,16 @@ function validateRecord(record) {
   return Joi.validate(record, schema);
 }
 
+async function getRecord(query) {
+  const filter = {};
+  if (query.id) filter._id = query.id;
+  if (query.verseId) filter.verseId = verseId;
+  if (query.isShaikh === true) filter.isShaikh = true;
+  else if (query.labeled === false) filter.labeledBy = { $size: 0 };
+
+  return await Record.find(filter).select("-__v");
+}
+
 exports.Record = Record;
 exports.validateRecord = validateRecord;
+exports.getRecord = getRecord;
