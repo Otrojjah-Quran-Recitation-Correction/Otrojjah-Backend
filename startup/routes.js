@@ -5,6 +5,7 @@ const rule = require("../routes/rule");
 const verse = require("../routes/verse");
 const user = require("../routes/user");
 const record = require("../routes/record");
+const apiMap = require("../routes/apiMap");
 const client = require("../routes/client");
 //const shaikh = require("../routes/shaikh");
 const label = require("../routes/label");
@@ -19,6 +20,7 @@ module.exports = function(app) {
   app.use("/api/verse", verse);
   app.use("/api/user", user);
   app.use("/api/record", record);
+  app.use("/api/apiMap", apiMap);
   //  app.use("/api/client", client);
   //  app.use("/api/shaikh", shaikh);
   // app.use("/api/label", label);

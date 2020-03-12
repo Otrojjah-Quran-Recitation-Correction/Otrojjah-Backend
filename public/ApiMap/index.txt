@@ -1,0 +1,5 @@
+Api Map:
+    -Rules:https://otrojjah-api.herokuapp.com/api/ApiMap/rule
+    -Verses:https://otrojjah-api.herokuapp.com/api/ApiMap/verse
+    -Users:https://otrojjah-api.herokuapp.com/api/ApiMap/user
+    -Records:https://otrojjah-api.herokuapp.com/api/ApiMap/record

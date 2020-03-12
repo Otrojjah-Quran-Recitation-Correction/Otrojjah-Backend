@@ -1,0 +1,3 @@
+Rule (حكم):
+    -Rules represented as a tree with one empty root.
+    -Get rule with id: https://otrojjah-api.herokuapp.com/api/rule
