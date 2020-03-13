@@ -62,6 +62,15 @@ async function getRecord(query) {
   return await Record.find(filter).select("-__v");
 }
 
+async function labelRecord(id, label, user) {
+  return await Record.findOneAndUpdate(
+    { _id: id },
+    { $push: { labeledBy: { shaikhId: id, label: label } } },
+    { new: true }
+  );
+}
+
 exports.validateRecord = validateRecord;
 exports.getRecord = getRecord;
 exports.createRecord = createRecord;
+exports.labelRecord = labelRecord;
