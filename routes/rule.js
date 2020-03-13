@@ -4,6 +4,8 @@ const Joi = require("joi");
 const _ = require("lodash");
 const { Rule, getRuleChildren, validateRule } = require("../models/rule");
 const validateObjectId = require("../middleware/validateObjectId");
+const auth = require("../middleware/auth");
+const adminAuth = [auth, require("../middleware/admin")];
 
 router.get("/", async (req, res) => {
   const rules = await getRuleChildren();
@@ -20,7 +22,7 @@ router.get("/:id", async (req, res) => {
   res.send(rules);
 });
 
-router.post("/", async (req, res) => {
+router.post("/", adminAuth, async (req, res) => {
   const { error } = validateRule(req.body);
   if (error) return res.status(400).send(error.details[0].message);
 
@@ -41,7 +43,7 @@ router.post("/", async (req, res) => {
   res.send(rule);
 });
 
-router.put("/:id", validateObjectId, async (req, res) => {
+router.put("/:id", adminAuth, validateObjectId, async (req, res) => {
   const { error } = validateRule(req.body);
   if (error) return res.status(400).send(error.details[0].message);
 
