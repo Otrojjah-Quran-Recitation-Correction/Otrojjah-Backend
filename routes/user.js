@@ -4,25 +4,27 @@ const bcrypt = require("bcryptjs");
 const _ = require("lodash");
 const { User, validateUser } = require("../models/user");
 const validateObjectId = require("../middleware/validateObjectId");
+const auth = require("../middleware/auth");
+const adminAuth = [auth, require("../middleware/admin")];
 
-router.get("/", async (req, res) => {
+router.get("/", adminAuth, async (req, res) => {
   const users = await User.find({}).select("-password -__v");
   res.send(users);
 });
 
-router.get("/me", async (req, res) => {
+router.get("/me", auth, async (req, res) => {
   const user = await User.findOneById(req.user._id).select("-password -__v");
   res.send(user);
 });
 
-router.get("/:id", validateObjectId, async (req, res) => {
+router.get("/:id", [adminAuth, validateObjectId], async (req, res) => {
   const user = await User.findOneById(req.params.id);
   if (!user) return res.status(400).send("User is not found.");
 
   res.send(user);
 });
 
-router.post("/", async (req, res) => {
+router.post("/", adminAuth, async (req, res) => {
   const { error } = validateUser(req.body);
   if (error) return res.status(400).send(error.details[0].message);
 
@@ -43,7 +45,7 @@ router.post("/", async (req, res) => {
     .send(_.pick(user, ["_id", "name", "email", "phoneNumber", "isShaikh"]));
 });
 
-router.put("/:id", validateObjectId, async (req, res) => {
+router.put("/:id", adminAuth, validateObjectId, async (req, res) => {
   const { error } = validateUser(req.body);
   if (error) return res.status(400).send(error.details[0].message);
 
@@ -59,7 +61,7 @@ router.put("/:id", validateObjectId, async (req, res) => {
   res.send(user);
 });
 
-router.delete("/:id", validateObjectId, async (req, res) => {
+router.delete("/:id", adminAuth, validateObjectId, async (req, res) => {
   const user = await User.findByIdAndRemove(req.params.id);
   if (!user) return res.status(400).send("User is not found.");
 
