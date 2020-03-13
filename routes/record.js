@@ -9,8 +9,11 @@ const {
 } = require("../models/record");
 const validateObjectId = require("../middleware/validateObjectId");
 const uploadFile = require("../middleware/uploadFile");
+const auth = require("../middleware/auth");
+const adminAuth = [auth, require("../middleware/admin")];
+const shaikhAuth = [auth, require("../middleware/shaikh")];
 
-router.get("/", async (req, res) => {
+router.get("/", adminAuth, async (req, res) => {
   const records = await getRecord(req.query);
   res.send(records);
 });
@@ -23,7 +26,7 @@ router.post("/", uploadFile, async (req, res) => {
   res.send(record);
 });
 
-router.put("/label/:id", validateObjectId, async (req, res) => {
+router.put("/label/:id", [shaikhAuth, validateObjectId], async (req, res) => {
   const record = await labelRecord(req.params.id, req.body.label, req.user);
   if (!record) return res.status(400).send("Record is not found.");
 
