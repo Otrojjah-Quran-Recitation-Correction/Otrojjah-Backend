@@ -6,11 +6,7 @@ const verse = require("../routes/verse");
 const user = require("../routes/user");
 const record = require("../routes/record");
 const apiMap = require("../routes/apiMap");
-const client = require("../routes/client");
-//const shaikh = require("../routes/shaikh");
-const label = require("../routes/label");
 const auth = require("../routes/auth");
-const uploadFolder = require("../routes/uploadFolder");
 
 module.exports = function(app) {
   app.use(cors());
@@ -21,10 +17,6 @@ module.exports = function(app) {
   app.use("/api/user", user);
   app.use("/api/record", record);
   app.use("/api/apiMap", apiMap);
-  //  app.use("/api/client", client);
-  //  app.use("/api/shaikh", shaikh);
-  // app.use("/api/label", label);
-  // app.use("/api/auth", auth);
-  // app.use("/api/uploadFolder", uploadFolder);
+  app.use("/api/auth", auth);
   app.use(error);
 };
