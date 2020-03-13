@@ -24,15 +24,8 @@ const recordSchema = new mongoose.Schema({
   },
   labeledBy: [
     new mongoose.Schema({
-      shaikhId: {
-        type: mongoose.Schema.Types.ObjectId
-      },
-      shaikhName: {
-        type: String
-      },
-      label: {
-        type: Boolean
-      }
+      shaikhId: { type: mongoose.Schema.Types.ObjectId },
+      label: { type: Boolean }
     })
   ]
 });
