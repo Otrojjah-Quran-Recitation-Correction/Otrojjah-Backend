@@ -4,13 +4,15 @@ const Joi = require("joi");
 const _ = require("lodash");
 const { Verse, validateVerse, getVerses } = require("../models/verse");
 const validateObjectId = require("../middleware/validateObjectId");
+const auth = require("../middleware/auth");
+const adminAuth = [auth, require("../middleware/admin")];
 
 router.get("/", async (req, res) => {
   const verses = await getVerses(req.query);
   res.send(verses);
 });
 
-router.post("/", async (req, res) => {
+router.post("/", adminAuth, async (req, res) => {
   const { error } = validateVerse(req.body);
   if (error) return res.status(400).send(error.details[0].message);
 
@@ -23,7 +25,7 @@ router.post("/", async (req, res) => {
   res.send(verse);
 });
 
-router.put("/:id", validateObjectId, async (req, res) => {
+router.put("/:id", [adminAuth, validateObjectId], async (req, res) => {
   const { error } = validateVerse(req.body);
   if (error) return res.status(400).send(error.details[0].message);
 
@@ -35,7 +37,7 @@ router.put("/:id", validateObjectId, async (req, res) => {
   res.send(verse);
 });
 
-router.delete("/:id", validateObjectId, async (req, res) => {
+router.delete("/:id", [adminAuth, validateObjectId], async (req, res) => {
   const verse = await Verse.findByIdAndRemove(req.params.id);
 
   if (!verse) return res.status(404).send("Verse is not found.");
