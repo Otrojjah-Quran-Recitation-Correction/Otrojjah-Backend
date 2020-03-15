@@ -30,6 +30,14 @@ async function getRuleChildren(id) {
   return await Rule.find({ parentId: id }).select("-__v");
 }
 
+async function getRule(query) {
+  const filter = {};
+  if (query.id) filter._id = query.id;
+  if (query.parentId) filter.parentId = query.parentId;
+
+  return await Rule.find(filter).select("-__v");
+}
+
 exports.Rule = Rule;
-exports.getRuleChildren = getRuleChildren;
+exports.getRule = getRule;
 exports.validateRule = validateRule;
