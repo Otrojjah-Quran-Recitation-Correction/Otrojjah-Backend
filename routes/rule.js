@@ -2,23 +2,13 @@ const express = require("express");
 const router = express.Router();
 const Joi = require("joi");
 const _ = require("lodash");
-const { Rule, getRuleChildren, validateRule } = require("../models/rule");
+const { Rule, getRule, validateRule } = require("../models/rule");
 const validateObjectId = require("../middleware/validateObjectId");
 const auth = require("../middleware/auth");
 const adminAuth = [auth, require("../middleware/admin")];
 
 router.get("/", async (req, res) => {
-  const rules = await getRuleChildren();
-  if (!rules) return res.status(400).send("There is no root rule.");
-  res.send(rules);
-});
-
-router.get("/:id", async (req, res) => {
-  const { id } = req.params;
-
-  const rules = await getRuleChildren(id);
-  if (!rules) return res.status(400).send("There is no children of this rule.");
-
+  const rules = await getRule(req.query);
   res.send(rules);
 });
 
