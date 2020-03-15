@@ -34,6 +34,8 @@ async function getRule(query) {
   const filter = {};
   if (query.id) filter._id = query.id;
   if (query.parentId) filter.parentId = query.parentId;
+  if (query.name) filter.name = query.name;
+  
 
   return await Rule.find(filter).select("-__v");
 }
