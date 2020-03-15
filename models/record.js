@@ -55,7 +55,7 @@ async function createRecord(body) {
 async function getRecord(query) {
   const filter = {};
   if (query.id) filter._id = query.id;
-  if (query.verseId) filter.verseId = verseId;
+  if (query.verseId) filter.verseId = query.verseId;
   if (query.isShaikh === true) filter.isShaikh = true;
   else if (query.labeled === false) filter.labeledBy = { $size: 0 };
 
