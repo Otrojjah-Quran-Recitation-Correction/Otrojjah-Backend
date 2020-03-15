@@ -47,12 +47,13 @@ router.put("/:id", adminAuth, validateObjectId, async (req, res) => {
   const { error } = validateRule(req.body);
   if (error) return res.status(400).send(error.details[0].message);
 
-  if (req.body.parentId)
-    return res.status(400).send("ParentId can't be modified.");
-
-  const Rule = await Rule.findByIdAndUpdate(req.params.id, req.body, {
-    new: true
-  });
+  const Rule = await Rule.findByIdAndUpdate(
+    req.params.id,
+    _.pick(req.body, "name"),
+    {
+      new: true
+    }
+  );
   if (!Rule) return res.status(400).send("There is no such rule");
 
   res.send(Rule);
