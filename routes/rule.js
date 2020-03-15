@@ -39,7 +39,7 @@ router.put("/:id", adminAuth, validateObjectId, async (req, res) => {
 
   const rule = await Rule.findByIdAndUpdate(
     req.params.id,
-    _.pick(req.body, "name"),
+    _.pick(req.body, ["name", "description"]),
     {
       new: true
     }
