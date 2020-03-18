@@ -65,7 +65,7 @@ async function getRecord(query) {
 async function labelRecord(id, label, user) {
   return await Record.findOneAndUpdate(
     { _id: id },
-    { $push: { labeledBy: { shaikhId: id, label: label } } },
+    { $push: { labeledBy: { shaikhId: user._id, label } } },
     { new: true }
   );
 }
