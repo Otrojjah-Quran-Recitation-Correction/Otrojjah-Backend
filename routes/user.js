@@ -18,7 +18,7 @@ router.get("/me", auth, async (req, res) => {
 });
 
 router.get("/:id", [adminAuth, validateObjectId], async (req, res) => {
-  const user = await User.findOneById(req.params.id);
+  const user = await User.findById(req.params.id);
   if (!user) return res.status(400).send("User is not found.");
 
   res.send(user);
