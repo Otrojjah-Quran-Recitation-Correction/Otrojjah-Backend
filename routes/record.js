@@ -10,15 +10,16 @@ const {
 const validateObjectId = require("../middleware/validateObjectId");
 const uploadFile = require("../middleware/uploadFile");
 const auth = require("../middleware/auth");
-const adminAuth = [auth, require("../middleware/admin")];
 const shaikhAuth = [auth, require("../middleware/shaikh")];
 
-router.get("/", adminAuth, async (req, res) => {
+router.get("/", auth, async (req, res) => {
   const records = await getRecord(req.query);
   res.send(records);
 });
 
 router.post("/", uploadFile, async (req, res) => {
+  console.log(req.file);
+
   const { error } = validateRecord(req.body);
   if (error) return res.status(400).send(error.details[0].message);
 
