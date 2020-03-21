@@ -12,7 +12,7 @@ const uploadFile = require("../middleware/uploadFile");
 const auth = require("../middleware/auth");
 const shaikhAuth = [auth, require("../middleware/shaikh")];
 
-router.get("/", auth, async (req, res) => {
+router.get("/", async (req, res) => {
   const records = await getRecord(req.query);
   res.send(records);
 });
