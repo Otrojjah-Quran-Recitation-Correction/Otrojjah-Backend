@@ -9,6 +9,7 @@ const {
 } = require("../models/record");
 const validateObjectId = require("../middleware/validateObjectId");
 const uploadFile = require("../middleware/uploadFile");
+const sendUploadToGCS = require("../middleware/sendUploadToGCS");
 const auth = require("../middleware/auth");
 const shaikhAuth = [auth, require("../middleware/shaikh")];
 
@@ -17,9 +18,7 @@ router.get("/", async (req, res) => {
   res.send(records);
 });
 
-router.post("/", uploadFile, async (req, res) => {
-  console.log(req.file);
-
+router.post("/", [uploadFile, sendUploadToGCS], async (req, res) => {
   const { error } = validateRecord(req.body);
   if (error) return res.status(400).send(error.details[0].message);
 
