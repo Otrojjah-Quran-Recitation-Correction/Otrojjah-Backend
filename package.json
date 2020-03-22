@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "preinstall": "node credentialsSetup.js",
     "test": "nodemon index.js",
     "start": "node index.js"
   },
