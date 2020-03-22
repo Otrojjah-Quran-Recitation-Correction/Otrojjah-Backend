@@ -6,7 +6,7 @@
   "scripts": {
     "test": "nodemon index.js",
     "start": "node index.js",
-    "postinstall" : "echo GOOGLE_CREDENTIALS > $GOOGLE_APPLICATION_CREDENTIALS"
+    "postinstall" : "echo $GOOGLE_CREDENTIALS > $GOOGLE_APPLICATION_CREDENTIALS"
   },
   "engines": {
     "node": "12.16.0"
