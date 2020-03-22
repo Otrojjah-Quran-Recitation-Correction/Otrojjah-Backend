@@ -1,4 +1,6 @@
 {
   "jwtPrivateKey": "",
-  "db": ""
+  "db": "",
+  "bucket_name": "",
+  "project_id": ""
 }
