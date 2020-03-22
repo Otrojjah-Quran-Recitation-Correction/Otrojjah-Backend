@@ -6,7 +6,7 @@
   "scripts": {
     "test": "nodemon index.js",
     "start": "node index.js",
-    "postinstall" : "echo $gcsCredentials > $gscCredentialsFile"
+    "postinstall" : "echo $gcsCredentials > $gcsCredentialsFile"
   },
   "engines": {
     "node": "12.16.0"

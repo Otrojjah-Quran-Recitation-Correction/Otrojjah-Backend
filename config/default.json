@@ -1,8 +1,8 @@
 {
   "jwtPrivateKey": "",
   "db": "",
-  "gscBucketName": "",
+  "gcsBucketName": "",
   "gcsProjectId": "",
   "gcsCredentials": "",
-  "gscCredentialsFile": ""
+  "gcsCredentialsFile": ""
 }
