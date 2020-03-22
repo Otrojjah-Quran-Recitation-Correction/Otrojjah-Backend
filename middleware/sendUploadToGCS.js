@@ -6,7 +6,7 @@ module.exports = function(req, res, next) {
   if (!req.file) {
     return next();
   }
-  const privateKey = path.join(__dirname, "../storage-credentials.json");
+  const privateKey = config.get("GOOGLE_APPLICATION_CREDENTIALS");
 
   const storage = new Storage({
     projectId: config.get("project_id"),

@@ -2,5 +2,6 @@
   "jwtPrivateKey": "",
   "db": "",
   "bucket_name": "",
-  "project_id": ""
+  "project_id": "",
+  "GOOGLE_APPLICATION_CREDENTIALS": ""
 }
