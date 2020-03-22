@@ -1,8 +1,8 @@
 {
   "jwtPrivateKey": "",
   "db": "",
-  "bucket_name": "",
-  "project_id": "",
-  "GOOGLE_CREDENTIALS": "",
-  "GOOGLE_APPLICATION_CREDENTIALS": ""
+  "gscBucketName": "",
+  "gcsProjectId": "",
+  "gcsCredentials": "",
+  "gscCredentialsFile": ""
 }

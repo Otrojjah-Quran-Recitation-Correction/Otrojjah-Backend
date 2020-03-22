@@ -6,14 +6,14 @@ module.exports = function(req, res, next) {
   if (!req.file) {
     return next();
   }
-  const privateKey = config.get("GOOGLE_APPLICATION_CREDENTIALS");
+  const privateKey = config.get("gscCredentialsFile");
 
   const storage = new Storage({
-    projectId: config.get("project_id"),
+    projectId: config.get("gcsProjectId"),
     keyFilename: privateKey
   });
 
-  const bucketName = config.get("bucket_name");
+  const bucketName = config.get("gscBucketName");
   const bucket = storage.bucket(bucketName);
   const gcsFileName = `${Date.now()}-${req.file.originalname}`;
   const file = bucket.file(gcsFileName);

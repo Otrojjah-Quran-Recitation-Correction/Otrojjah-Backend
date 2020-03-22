@@ -3,4 +3,5 @@
 /public/records
 logfile.log
 uncaughtExceptions.log
-storage-credentials.json
+googleCredentials.json
+googleCredentialsEnvVar.txt
