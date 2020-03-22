@@ -15,7 +15,7 @@ const recordSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     required: true
   },
-  filePath: {
+  fileURL: {
     type: String,
     required: true
   },
@@ -37,7 +37,7 @@ function validateRecord(record) {
     name: Joi.string().required(),
     label: Joi.string().required(),
     verseId: Joi.objectId().required(),
-    filePath: Joi.string().required(),
+    fileURL: Joi.string().required(),
     isShaikh: Joi.boolean(),
     labeledBy: Joi.array()
   };
@@ -46,7 +46,7 @@ function validateRecord(record) {
 
 async function createRecord(body) {
   const record = new Record(
-    _.pick(body, ["name", "label", "verseId", "filePath", "isShaikh"])
+    _.pick(body, ["name", "label", "verseId", "fileURL", "isShaikh"])
   );
   await record.save();
   return record;
