@@ -1,3 +1,6 @@
 /node_modules
 /.vscode
 /public/records
+logfile.log
+uncaughtExceptions.log
+storage-credentials.json
