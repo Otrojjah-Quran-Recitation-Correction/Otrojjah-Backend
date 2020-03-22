@@ -33,7 +33,7 @@ module.exports = function(req, res, next) {
     req.file.cloudStorageObject = gcsFileName;
 
     return file.makePublic().then(() => {
-      req.file.gcsUrl = `https://storage.googleapis.com/${bucketName}/${gcsFileName}`;
+      req.body.fileURL = `https://storage.googleapis.com/${bucketName}/${gcsFileName}`;
       next();
     });
   });
