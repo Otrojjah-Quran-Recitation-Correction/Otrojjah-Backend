@@ -1,0 +1,15 @@
+Verse (آيه):
+
+    -Get operations:
+        -Get root rule: "https://otrojjah-api.herokuapp.com/api/ApiMap/rule" //Get
+        -Get children of specific rule: "https://otrojjah-api.herokuapp.com/api/ApiMap/rule/:id" //Get
+    
+    -Post operations:
+        -To add new rule you need to post its: name - rule parent id.
+        -The tree has only one root at:"https://otrojjah-api.herokuapp.com/api/ApiMap/rule" //Get
+        -Post rule:"https://otrojjah-api.herokuapp.com/api/ApiMap/rule" //Post
+    
+    -Put operations:
+        -It's only allowed to edit rule name, because parentId edit can cause conflict.
+        -To edit rule you need to post its: new name.
+        -Post rule:"https://otrojjah-api.herokuapp.com/api/ApiMap/rule/:id" //Put
