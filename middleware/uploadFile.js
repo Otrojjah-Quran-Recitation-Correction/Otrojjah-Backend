@@ -1,13 +1,10 @@
-const multer = require("multer");
-const path = require("path");
+const Multer = require("multer");
 
-const storage = multer.diskStorage({
-  destination: path.join(__dirname, "../public/records"),
-  filename: function(req, file, cb) {
-    cb(null, file.fieldname + "-" + Date.now() + ".wav");
-  }
+const multer = Multer({
+  storage: Multer.MemoryStorage,
+  limits: { fileSize: 10 * 1024 * 1024 }
 });
 
-const upload = multer({ storage: storage }).single("record");
+const upload = multer.single("record");
 
 module.exports = upload;
