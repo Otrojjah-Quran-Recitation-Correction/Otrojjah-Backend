@@ -5,7 +5,8 @@ const {
   validateRecord,
   getRecord,
   createRecord,
-  labelRecord
+  labelRecord,
+  getRandomRecord
 } = require("../models/record");
 const validateObjectId = require("../middleware/validateObjectId");
 const uploadFile = require("../middleware/uploadFile");
@@ -15,6 +16,11 @@ const shaikhAuth = [auth, require("../middleware/shaikh")];
 
 router.get("/", async (req, res) => {
   const records = await getRecord(req.query);
+  res.send(records);
+});
+
+router.get("/random/:type", async (req, res) => {
+  const records = await getRandomRecord(req.params.type);
   res.send(records);
 });
 

@@ -70,6 +70,14 @@ async function labelRecord(id, label, user) {
   );
 }
 
+async function getRandomRecord(type) {
+  const filter = { isShaikh: type === "shaikh" };
+  const records = await getRecord(filter);
+  const randomInt = randomInt(0, 1000000) % records.length;
+  return records[randomInt];
+}
+
+exports.getRandomRecord = getRandomRecord;
 exports.validateRecord = validateRecord;
 exports.getRecord = getRecord;
 exports.createRecord = createRecord;
