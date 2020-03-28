@@ -60,7 +60,10 @@ async function getRecord(query) {
   if (query.id) filter._id = query.id;
   if (query.verseId) filter.verseId = query.verseId;
   if (query.isShaikh === true) filter.isShaikh = true;
-  else if (query.labeled === false) filter.labeledBy = { $size: 0 };
+  else {
+    if (query.isShaikh === false) filter.isShaikh = false;
+    if (query.labeled === false) filter.labeledBy = { $size: 0 };
+  }
 
   return await Record.find(filter).select("-__v");
 }
