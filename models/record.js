@@ -35,7 +35,7 @@ const Record = mongoose.model("Record", recordSchema);
 
 function validateRecord(record) {
   const schema = {
-    name: Joi.string().required(),
+    name: Joi.string(),
     label: Joi.string().required(),
     verseId: Joi.objectId().required(),
     fileURL: Joi.string(),
@@ -46,6 +46,7 @@ function validateRecord(record) {
 }
 
 async function createRecord(body, file) {
+  body.name = file.originalname;
   body.fileURL = getFileURL(body, file);
   const record = new Record(
     _.pick(body, ["name", "label", "verseId", "fileURL", "isShaikh"])

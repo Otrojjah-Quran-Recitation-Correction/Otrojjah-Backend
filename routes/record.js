@@ -12,6 +12,7 @@ const validateObjectId = require("../middleware/validateObjectId");
 const uploadFile = require("../middleware/uploadFile");
 const sendUploadToGCS = require("../middleware/sendUploadToGCS");
 const auth = require("../middleware/auth");
+const adminAuth = [auth, require("../middleware/admin")];
 const shaikhAuth = [auth, require("../middleware/shaikh")];
 
 router.get("/", async (req, res) => {
@@ -32,7 +33,23 @@ router.post("/", [uploadFile, sendUploadToGCS], async (req, res) => {
     await createRecord(req.body, file);
   });
 
-  res.send(`${req.files.length} files uploaded.`);
+  res.send(`${req.files.length} records added.`);
+});
+
+router.put("/:id", [adminAuth, validateObjectId], async (req, res) => {
+  const { error } = validateRecord(req.body);
+  if (error) return res.status(400).send(error.details[0].message);
+
+  const record = await Record.findByIdAndUpdate(
+    req.params.id,
+    _.pick(req.body, ["label", "verseId"]),
+    {
+      new: true
+    }
+  );
+  if (!record) return res.status(400).send("There is no such record");
+
+  res.send(record);
 });
 
 router.put("/label/:id", [shaikhAuth, validateObjectId], async (req, res) => {
