@@ -7,7 +7,7 @@ const getFileURL = require("../util/getGCSFileURL");
 module.exports = function(req, res, next) {
   next();
 
-  const privateKey = config.get("gcsCredentialsFile");	
+  const privateKey = config.get("gcsCredentialsFile");
 
   const storage = new Storage({
     projectId: config.get("gcsProjectId"),
@@ -37,7 +37,9 @@ module.exports = function(req, res, next) {
 
       bucketFile
         .makePublic()
-        .then(() => console.log(getFileURL(req.body, file)));
+        .then(() =>
+          console.log(`${index + 1} of ${req.files.length} files uploaded.`)
+        );
     });
     stream.end(file.buffer);
   });
