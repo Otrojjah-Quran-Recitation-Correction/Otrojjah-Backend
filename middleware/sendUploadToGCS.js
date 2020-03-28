@@ -1,12 +1,13 @@
 const { Storage } = require("@google-cloud/storage");
 const config = require("config");
 const path = require("path");
+const getFileName = require("../util/getGCSDirectory");
+const getFileURL = require("../util/getGCSFileURL");
 
 module.exports = function(req, res, next) {
-  if (!req.file) {
-    return next();
-  }
-  const privateKey = config.get("gcsCredentialsFile");
+  next();
+
+  const privateKey = path.join(__dirname, "../config/googleCredentials.json");
 
   const storage = new Storage({
     projectId: config.get("gcsProjectId"),
@@ -15,28 +16,29 @@ module.exports = function(req, res, next) {
 
   const bucketName = config.get("gcsBucketName");
   const bucket = storage.bucket(bucketName);
-  const gcsFileName = `${Date.now()}-${req.file.originalname}`;
-  const file = bucket.file(gcsFileName);
 
-  const stream = file.createWriteStream({
-    metadata: {
-      contentType: req.file.mimetype
-    }
-  });
+  req.files.forEach(async (file, index) => {
+    const gcsFileName = getFileName(req.body, file);
+    const bucketFile = bucket.file(gcsFileName);
 
-  stream.on("error", err => {
-    req.file.cloudStorageError = err;
-    next(err);
-  });
-
-  stream.on("finish", async () => {
-    req.file.cloudStorageObject = gcsFileName;
-
-    return file.makePublic().then(() => {
-      req.body.fileURL = `https://storage.googleapis.com/${bucketName}/${gcsFileName}`;
-      next();
+    const stream = bucketFile.createWriteStream({
+      metadata: {
+        contentType: file.mimetype
+      }
     });
-  });
 
-  stream.end(req.file.buffer);
+    stream.on("error", err => {
+      req.files[index].cloudStorageError = err;
+      next(err);
+    });
+
+    stream.on("finish", async () => {
+      req.files[index].cloudStorageObject = gcsFileName;
+
+      bucketFile
+        .makePublic()
+        .then(() => console.log(getFileURL(req.body, file)));
+    });
+    stream.end(file.buffer);
+  });
 };

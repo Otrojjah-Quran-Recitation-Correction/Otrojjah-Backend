@@ -28,8 +28,11 @@ router.post("/", [uploadFile, sendUploadToGCS], async (req, res) => {
   const { error } = validateRecord(req.body);
   if (error) return res.status(400).send(error.details[0].message);
 
-  const record = await createRecord(req.body);
-  res.send(record);
+  req.files.forEach(async file => {
+    await createRecord(req.body, file);
+  });
+
+  res.send(`${req.files.length} files uploaded.`);
 });
 
 router.put("/label/:id", [shaikhAuth, validateObjectId], async (req, res) => {

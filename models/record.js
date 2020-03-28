@@ -1,6 +1,7 @@
 const Joi = require("joi");
 const mongoose = require("mongoose");
 const _ = require("lodash");
+const getFileURL = require("../util/getGCSFileURL.js");
 
 const recordSchema = new mongoose.Schema({
   name: {
@@ -37,14 +38,15 @@ function validateRecord(record) {
     name: Joi.string().required(),
     label: Joi.string().required(),
     verseId: Joi.objectId().required(),
-    fileURL: Joi.string().required(),
+    fileURL: Joi.string(),
     isShaikh: Joi.boolean(),
     labeledBy: Joi.array()
   };
   return Joi.validate(record, schema);
 }
 
-async function createRecord(body) {
+async function createRecord(body, file) {
+  body.fileURL = getFileURL(body, file);
   const record = new Record(
     _.pick(body, ["name", "label", "verseId", "fileURL", "isShaikh"])
   );
@@ -71,7 +73,7 @@ async function labelRecord(id, label, user) {
 }
 
 function randomInt(min, max) {
-	return min + Math.floor((max - min) * Math.random());
+  return min + Math.floor((max - min) * Math.random());
 }
 
 async function getRandomRecord(type) {
