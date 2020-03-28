@@ -7,7 +7,7 @@ const getFileURL = require("../util/getGCSFileURL");
 module.exports = function(req, res, next) {
   next();
 
-  const privateKey = path.join(__dirname, "../config/googleCredentials.json");
+  const privateKey = config.get("gcsCredentialsFile");	
 
   const storage = new Storage({
     projectId: config.get("gcsProjectId"),
