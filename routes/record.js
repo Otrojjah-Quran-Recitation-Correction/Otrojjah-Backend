@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const _ = require("lodash");
 const {
+  Record,
   validateRecord,
   getRecord,
   createRecord,

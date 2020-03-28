@@ -84,6 +84,7 @@ async function getRandomRecord(type) {
   return records[randomId];
 }
 
+exports.Record = Record;
 exports.getRandomRecord = getRandomRecord;
 exports.validateRecord = validateRecord;
 exports.getRecord = getRecord;
