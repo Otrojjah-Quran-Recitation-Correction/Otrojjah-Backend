@@ -6,7 +6,7 @@
   "scripts": {
     "test": "nodemon index.js",
     "start": "node index.js",
-    "postinstall" : "echo $gcsCredentials > $gcsCredentialsFile"
+    "postinstall": "echo $gcsCredentials > $gcsCredentialsFile"
   },
   "engines": {
     "node": "12.16.0"
@@ -17,6 +17,7 @@
   "dependencies": {
     "@google-cloud/storage": "^4.6.0",
     "bcryptjs": "^2.4.3",
+    "compression": "^1.7.4",
     "config": "^1.31.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
@@ -25,6 +26,7 @@
     "fawn": "^2.1.5",
     "google-auth-library": "^5.10.1",
     "googleapis": "^39.2.0",
+    "helmet": "^3.22.0",
     "joi": "^13.7.0",
     "joi-objectid": "^2.0.0",
     "jsonwebtoken": "^8.5.1",
