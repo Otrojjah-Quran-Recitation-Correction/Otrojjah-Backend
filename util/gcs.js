@@ -2,8 +2,7 @@ const { Storage } = require("@google-cloud/storage");
 const config = require("config");
 const path = require("path");
 
-//const privateKey = config.get("gcsCredentialsFile");
-const privateKey = path.join(__dirname, "../config/googleCredentials.json");
+const privateKey = config.get("gcsCredentialsFile");
 const storage = new Storage({
   projectId: config.get("gcsProjectId"),
   keyFilename: privateKey
@@ -11,14 +10,12 @@ const storage = new Storage({
 const bucketName = config.get("gcsBucketName");
 const bucket = storage.bucket(bucketName);
 
-async function deleteGCSFile(fileName) {
-  await bucket.file(fileName).delete();
-}
+async function deleteGCSDirectory(record) {
+  const type = record.isShaikh ? "Shaikh" : "Client";
+  let fileName = `${type}/${record.verseId}`;
+  if (record.name) fileName += `/${record.name}`;
 
-async function deleteGCSDirectory(verseId, isShaikh) {
-  const type = isShaikh ? "Shaikh" : "Client";
-  const fileName = `${type}/${verseId}`;
-  await deleteGCSFile(fileName);
+  await bucket.deleteFiles({ prefix: fileName });
 }
 
 function getGCSDirectory(reqBody, file) {
@@ -59,4 +56,3 @@ exports.uploadFileToGCS = uploadFileToGCS;
 exports.getGCSFileURL = getGCSFileURL;
 exports.getGCSDirectory = getGCSDirectory;
 exports.deleteGCSDirectory = deleteGCSDirectory;
-exports.deleteGCSFile = deleteGCSFile;

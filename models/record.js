@@ -4,7 +4,6 @@ const _ = require("lodash");
 const {
   getGCSFileURL,
   deleteGCSDirectory,
-  deleteGCSFile,
   uploadFileToGCS
 } = require("../util/gcs");
 
@@ -85,18 +84,19 @@ async function labelRecord(id, label, user) {
 }
 
 async function deleteRecord(query) {
-  const filter = _.pick(query, ["id", "verseId", "isShaikh"]);
-  const records = await Record.deleteMany(filter);
+  const filter = _.pick(query, ["verseId", "isShaikh"]);
+  if (query.id) filter._id = query.id;
 
-  if (!records) return "No records to delete";
+  const records = await Record.find(filter);
+  if (!records.length) return "No records to delete";
 
   if (query.storageDelete) {
-    if (query.id) await deleteGCSFile(records.name);
-    else await deleteGCSDirectory(query.verseId, query.isShaikh);
+    if (query.id) deleteGCSDirectory(records[0]);
+    else deleteGCSDirectory(query);
   }
 
-  console.log(records);
-  return `${records.n} records deleted.`;
+  await Record.deleteMany(filter);
+  return `${records.length} records deleted.`;
 }
 
 function randomInt(min, max) {
