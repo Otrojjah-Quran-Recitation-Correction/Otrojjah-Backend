@@ -1,7 +1,12 @@
 const Joi = require("joi");
 const mongoose = require("mongoose");
 const _ = require("lodash");
-const getFileURL = require("../util/getGCSFileURL.js");
+const {
+  getGCSFileURL,
+  deleteGCSDirectory,
+  deleteGCSFile,
+  uploadFileToGCS
+} = require("../util/gcs");
 
 const recordSchema = new mongoose.Schema({
   name: {
@@ -47,11 +52,14 @@ function validateRecord(record) {
 
 async function createRecord(body, file) {
   body.name = file.originalname;
-  body.fileURL = getFileURL(body, file);
+  body.fileURL = getGCSFileURL(body, file);
+
   const record = new Record(
     _.pick(body, ["name", "label", "verseId", "fileURL", "isShaikh"])
   );
   await record.save();
+  uploadFileToGCS(body, file);
+
   return record;
 }
 
@@ -76,6 +84,21 @@ async function labelRecord(id, label, user) {
   );
 }
 
+async function deleteRecord(query) {
+  const filter = _.pick(query, ["id", "verseId", "isShaikh"]);
+  const records = await Record.deleteMany(filter);
+
+  if (!records) return "No records to delete";
+
+  if (query.storageDelete) {
+    if (query.id) await deleteGCSFile(records.name);
+    else await deleteGCSDirectory(query.verseId, query.isShaikh);
+  }
+
+  console.log(records);
+  return `${records.n} records deleted.`;
+}
+
 function randomInt(min, max) {
   return min + Math.floor((max - min) * Math.random());
 }
@@ -93,3 +116,4 @@ exports.validateRecord = validateRecord;
 exports.getRecord = getRecord;
 exports.createRecord = createRecord;
 exports.labelRecord = labelRecord;
+exports.deleteRecord = deleteRecord;

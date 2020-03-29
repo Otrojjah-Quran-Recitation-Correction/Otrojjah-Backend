@@ -7,11 +7,12 @@ const {
   getRecord,
   createRecord,
   labelRecord,
+  deleteRecord,
   getRandomRecord
 } = require("../models/record");
 const validateObjectId = require("../middleware/validateObjectId");
-const uploadFile = require("../middleware/uploadFile");
-const sendUploadToGCS = require("../middleware/sendUploadToGCS");
+const uploadFiles = require("../middleware/uploadFiles");
+const renameFiles = require("../middleware/renameFiles");
 const auth = require("../middleware/auth");
 const adminAuth = [auth, require("../middleware/admin")];
 const shaikhAuth = [auth, require("../middleware/shaikh")];
@@ -26,7 +27,7 @@ router.get("/random/:type", async (req, res) => {
   res.send(records);
 });
 
-router.post("/", [uploadFile, sendUploadToGCS], async (req, res) => {
+router.post("/", [uploadFiles, renameFiles], async (req, res) => {
   const { error } = validateRecord(req.body);
   if (error) return res.status(400).send(error.details[0].message);
 
@@ -58,6 +59,11 @@ router.put("/label/:id", [shaikhAuth, validateObjectId], async (req, res) => {
   if (!record) return res.status(400).send("Record is not found.");
 
   res.send(record);
+});
+
+router.delete("/", adminAuth, async (req, res) => {
+  const result = await deleteRecord(req.query);
+  res.send(result);
 });
 
 module.exports = router;
