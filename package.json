@@ -22,7 +22,7 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "express-async-errors": "^2.1.2",
-    "express-fileupload": "^1.1.6",
+    "express-fileupload": "^1.1.9",
     "fawn": "^2.1.5",
     "google-auth-library": "^5.10.1",
     "googleapis": "^39.2.0",
